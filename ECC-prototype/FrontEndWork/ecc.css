@@ -1,0 +1,91 @@
+body {
+    background-color: lightgray;
+    font-family: 'Raleway', sans-serif;
+    font-size: 1.5em;
+    margin-left: 3em;
+}
+
+nav {
+    padding: 1em;
+    background-color: darkgray;
+}
+
+h1 {
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+}
+
+li {
+    padding: 1em;
+}
+
+img {
+    width: 30%;
+}
+
+a {
+    padding: 1em;
+}
+
+.button {
+    background-color: firebrick;
+    color: antiquewhite;
+    font-size: 1em;
+    width: 30%;
+    border-radius: 2em;
+}
+
+.column {
+    -webkit-column-count: 2;
+       -moz-column-count: 2;
+            column-count: 2;
+    -webkit-column-fill: balance;
+       -moz-column-fill: balance;
+            column-fill: balance;
+}
+
+.navhover:hover, .stemcat:hover {
+    background-color: firebrick;
+    color: antiquewhite;
+}
+
+.plus {
+    font-size: 1.5em;
+    background-color: darkgray;
+    color: antiquewhite;
+    padding: 0em;
+}
+
+.rarrow {
+    margin-left: 95%;
+    display: block;
+    font-size: 1em;    
+}
+
+.stemcat {
+    padding: 1em;
+    border: 1px solid darkgray;
+    border-radius: 1em;
+    margin-top: 0.5em;
+    background-color: whitesmoke;
+}
+
+#logo {
+    width: 7em;
+}
+
+#search {
+    background-color: firebrick;
+    color: antiquewhite;
+    border-radius: 2em;
+    height: 3.5em;
+    width: 10%;
+}
+
+#searchbar {
+    height: 3.5em;
+    border-radius: 2em;
+    width: 25%;
+    margin: 2em;
+}
