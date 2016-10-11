@@ -6,34 +6,50 @@
     <meta charset="utf-8">
     <!--Mobile specific-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no"/>
+    <link rel="stylesheet" type="text/css" href="ecc.css">
+    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet"> 
 </head>
 
 <body>
     <figure>
-        <img src="cseplogo.png" alt="CSEP logo"/>
+        <img src="cseplogo.png" id="logo" alt="CSEP logo">
     </figure>
-    
     <h1>Collections</h1>
+    <input type="search" id = "searchbar" placeholder="Search...">
+    <button type="button" id="search">Search</button> 
     <nav>
-        <a href="index.html">Home</a>
-        <a href="search.html">Advanced Search</a>
-        <a href="collections.html">Collections</a>
-        <a href="resources.html">Resources</a>
-        <a href="ethicslinks.html">Ethics &#64; IIT</a>
+        <a class="navhover" href="index.html">Home</a>
+        <a class="navhover" href="search.html">Advanced Search</a>
+        <a class="navhover" href="collections.html">Collections</a>
+        <a class="navhover" href="resources.html">Resources</a>
+        <a class="navhover" href="ethicslinks.html">Ethics &#64; IIT</a>
     </nav>
-    <h2>Agriculture</h2>
-        <p>Ethics codes from agricultural organizations can go here. Consult with org team to see proper categories.</p>
-    <h2>Business</h2>
-        <p>Ethics codes from business organizations can go here. Consult with org team to see proper categories.</p>
-    <h2>Health Care</h2>
-        <p>Ethics codes from health care organizations can go here. Consult with org team to see proper categories.</p>
-    <h2>Legal</h2>
-        <p>Ethics codes from legal organizations can go here. Consult with org team to see proper categories.</p>
-    <h2>Media</h2>
-        <p>Ethics codes from media organizations can go here. Consult with org team to see proper categories.</p>
-    <h2>Real Estate</h2>
-        <p>Ethics codes from real estate organizations can go here. Consult with org team to see proper categories.</p>
-    <h2>Science</h2>
-        <p>Ethics codes from science organizations can go here. Consult with org team to see proper categories.</p>
+    
+    <div class="column">
+        <figure>
+            <a href="stem.html"><img src="stem.png" alt="stem image"/></a>
+        </figure>
+            <a href="stem.html"><button type="button" class="button">STEM</button></a>
+            <figure>
+                <img src="art-icon.png" alt="art image"/>
+            </figure>
+        <button type="button" class="button">Art/Hum.</button>
+            <figure>
+                <img src="business.png" alt="business image"/>
+            </figure>
+        <button type="button" class="button">Business</button>
+            <figure>
+                <img src="govicon.png" alt="judge image"/>
+            </figure>
+        <button type="button" class="button">Gov./Law</button>
+            <figure>
+                <img src="social.png" alt="social image"/>
+            </figure>
+        <button type="button" class="button">Social</button>
+            <figure>
+                <img src="general.png" alt="infinity image"/>
+            </figure>
+        <button type="button" class="button">General</button>
+    </div>
 </body>
 </html>
