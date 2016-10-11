@@ -1,13 +1,12 @@
 body {
-    background-color: lightgray;
-    font-family: 'Raleway', sans-serif;
-    font-size: 1.5em;
+    background-color: white;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1em;
     margin-left: 3em;
 }
 
 nav {
     padding: 1em;
-    background-color: darkgray;
 }
 
 h1 {
@@ -26,6 +25,8 @@ img {
 
 a {
     padding: 1em;
+    text-decoration: none;
+    color: #e7434e;
 }
 
 .button {
@@ -72,7 +73,7 @@ a {
 }
 
 #logo {
-    width: 7em;
+    width: 100%;
 }
 
 #search {
