@@ -6,21 +6,112 @@
     <meta charset="utf-8">
     <!--Mobile specific-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no"/>
+	<link rel="stylesheet" type="text/css" href="search.css">
+
 </head>
 
 <body>
-    <figure>
-        <img src="cseplogo.png" alt="CSEP logo"/>
-    </figure>
+
+<figure class="header">
+  <img src="cseplogo.png" alt="CSEP logo" />
+<center> <h1 style="color:red;">ETHICS CODE COLLECTION</h1> </center>
+  </figure>
+<br><br><br><br><br><br><br><br>
+
+	
+	<hr>
+	  <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="search.html">Advanced Search</a></li>
+        <li><a href="collections.html">Collections</a></li>
+        <li><a href="resources.html">Resources</a></li>
+        <li><a href="ethicslinks.html">Ethics &#64; IIT</a></li>
+    </ul> <br>
     
     <h1>Advanced Search</h1>
-    <nav>
-        <a class="navhover" href="index.html">Home</a>
-        <a class="navhover" href="search.html">Advanced Search</a>
-        <a class="navhover" href="collections.html">Collections</a>
-        <a class="navhover" href="resources.html">Resources</a>
-        <a class="navhover" href="ethicslinks.html">Ethics &#64; IIT</a>
-    </nav>
-    <p>Search has filters like subject area, organization, resource type, profession, etc.</p>
+	<div id = "box1">
+    <input type="text" name="search" placeholder= "Search">
+    <form action="demo_form.asp"><br>
+
+<select name="All Fields">
+<option value="Field1">Field1</option>
+<option value="Field2">Field2</option>
+<option value="Field3">Field3</option>
+</select><br>
+<textarea name="text" rows="3" cols="30">Text Area</textarea></br>
+
+<select name="All Fields">
+<option value="Field1">Field1</option>
+<option value="Field2">Field2</option>
+<option value="Field3">Field3</option>
+</select><br>
+<textarea name="text" rows="3" cols="30">Text Area</textarea><br><br
+
+<input type="button"    value=" Add Fields">
+<input type="button"    value=" Search"></br></br>
+
+<p1><b> Additionl Search Criteria </b><p1><br><br>
+<p2> Article Option: </p2> 
+<select id="Article Option" name="Article Option">
+  <option  disabled selected</option>
+  <option>None</option>
+  <option>Option-1</option>
+  <option>Option-2</option>
+  <option>Option-3</option>
+</select><br>
+
+<p3> Years: </p3> 
+<select id="Years" name="years">
+  <option  disabled selected</option>
+  <option>None</option>
+  <option>Option-1</option>
+  <option>Option-2</option>
+  <option>Option-3</option>
+</select><br>
+
+<p4> Search by language: </p4> 
+<select id="Search by language" name="Search by language">
+  <option  disabled selected</option>
+  <option>None</option>
+  <option>Option-1</option>
+  <option>Option-2</option>
+  <option>Option-3</option>
+</select><br><br>
+
+<p5><b>Categories</b></p5><br>
+  <input type="checkbox" name="Agriculture" value="Agriculture"> Agriculture<br>
+  <input type="checkbox" name="Animal Breeding and Care" value="Animal Breeding and Care"> Animal Breeding and Care<br>
+  <input type="checkbox" name="Architecture" value="Architecture"> Architecture<br>
+  <input type="checkbox" name="Earth" value="Earth"> Earth<br>
+  <input type="checkbox" name="Design" value="Design"> Design<br>
+  <input type="checkbox" name="Buisness" value="Buisness"> Buisness<br>
+  <input type="checkbox" name="Communication and Media" value="Engineering"> Engineering<br>
+  <input type="checkbox" name="Construction Trade" value="Construction Trade"> Construction Trade<br>
+  <input type="checkbox" name="Education and Academy" value="Education and Academy"> Education and Academy<br>
+  <input type="checkbox" name="Fraternal and Social Organization" value="Fraternal and Social Organization"> Fraternal and Social Organization<br>
+  <input type="checkbox" name="Life and Enviornmental Science" value="Life and Enviornmental Science"> Life and Enviornmental Science<br>
+  <input type="checkbox" name="Physical Science" value="Physical Science"> Physical Science<br>
+  <input type="checkbox" name="Engineering" value="Engineering"> Engineering<br>
+  <input type="checkbox" name="Social Science" value="Social Science"> Social Science<br>
+  <input type="checkbox" name="Government" value="Government"> Government<br>
+  <input type="checkbox" name="Health Care and Medicine" value="Health Care and Medicine"> Health Care and Medicine<br>
+  <input type="checkbox" name="Mental Health" value="Mental Health"> Mental Health<br>
+  <input type="checkbox" name="Military" value="Military"> Military<br>
+  <input type="checkbox" name="Real Estate" value="Real Estate"> Real Estate<br>
+  <input type="checkbox" name="Service Organization" value="Service Organization"> Service Organization<br>
+  <input type="checkbox" name="Sports and Athletics" value="Sports and Athletics"> Sports and Athletics<br>
+  <input type="checkbox" name="Travel and Transportation" value="Travel and Transportation"> Travel and Transportation<br>
+  <input type="checkbox" name="Wildlife and Enviornmental Stewardship" value="Wildlife and Enviornmental Stewardship"> Wildlife and Enviornmental Stewardship<br>
+  <input type="checkbox" name="All" value="All"> All<br><br>
+
+  <p6><b>Format</b></p6><br>
+  <input type="checkbox" name="Print Guide" value="Print Guide"> Print Guide<br>
+  <input type="checkbox" name="Full Text" value="Full Text"> Full Text<br>
+  <input type="checkbox" name="All" value="All"> All<br><br>
+  <input type="submit" value="Submit">
+ </div>
+
+  
+
 </body>
 </html>
