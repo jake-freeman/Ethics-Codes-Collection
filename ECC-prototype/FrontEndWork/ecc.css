@@ -195,6 +195,13 @@ footer {
     margin-left: 1em;
 }
 
+#contents {
+    margin-left: 2em;
+}
+#disclaimer {
+    font-style: italic;
+}
+
 
 #emailbutton {
        background-color: #e7434e;
