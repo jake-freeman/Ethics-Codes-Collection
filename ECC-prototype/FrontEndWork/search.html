@@ -12,9 +12,6 @@
 
 <body>	
     <a class="logo" href="index.html"><img src="ECC-Banner.png" class="logo" alt="ECC logo"/></a>
-    <h1>Advanced Search</h1>
-    <form><input type="search" value= "" id="searchbar" placeholder="Explore Our Digital Collection">
-        <button type="button" id="search">Search</button></form> 
     <nav>
         <a class="navhover" href="index.html">Home</a>
         <a class="navhover" href="search.html">Advanced Search</a>
@@ -22,82 +19,143 @@
         <a class="navhover" href="resources.html">Resources</a>
         <a class="navhover" href="ethicslinks.html">Ethics &#64; IIT</a>
     </nav>
+    <h1>Advanced Search</h1>
+    <div>
+        <input type="search" value= "" id="searchbar" placeholder="Explore Our Digital Collection">
+        <button type="button" id="search">Search</button>
+    </div> 
+    <div class="textfields">
+        <select class="select">
+            <option value="Field1">Field1</option>
+            <option value="Field2">Field2</option>
+            <option value="Field3">Field3</option>
+        </select>
+        <textarea name="text">Text Area</textarea>
+    </div>
+    <div class="textfields">
+        <select class="select">
+            <option value="Field1">Field1</option>
+            <option value="Field2">Field2</option>
+            <option value="Field3">Field3</option>
+        </select>
+        <textarea name="text">Text Area</textarea>
+    </div>
+    <div class="advsearch">
+        <button type="submit" class="button">SEARCH</button>
+        <button type="button" class="button">ADD FIELDS</button>
+    </div>
+    
+    <h2>Additional Search Criteria</h2>
+    
+    <div class="advsearch">
+        <select class="select" name="Article Option">
+            <option selected>Article Option</option>
+            <option>Option-1</option>
+            <option>Option-2</option>
+            <option>Option-3</option>
+        </select>
 
-<select name="All Fields">
-<option value="Field1">Field1</option>
-<option value="Field2">Field2</option>
-<option value="Field3">Field3</option>
-</select>
-<textarea name="text" rows="3" cols="30">Text Area</textarea>
-
-<select name="All Fields">
-<option value="Field1">Field1</option>
-<option value="Field2">Field2</option>
-<option value="Field3">Field3</option>
-</select>
-<textarea name="text" rows="3" cols="30">Text Area</textarea>
-
-<input type="button" value=" Add Fields">
-<input type="button" value=" Search">
-
-<p><b> Additional Search Criteria </b><p><br><br>
-<p> Article Option: </p> 
-<select name="Article Option">
-  <option disabled>""</option>
-  <option>None</option>
-  <option>Option-1</option>
-  <option>Option-2</option>
-  <option>Option-3</option>
-</select><br>
-
-<p> Years: </p> 
-<select name="years">
-  <option disabled>""</option>
-  <option>None</option>
-  <option>Option-1</option>
-  <option>Option-2</option>
-  <option>Option-3</option>
-</select><br>
-
-<p> Search by language: </p> 
-<select name="Search by language">
-  <option disabled>""</option>
-  <option>None</option>
-  <option>Option-1</option>
-  <option>Option-2</option>
-  <option>Option-3</option>
-</select><br><br>
-
-<p><b>Categories</b></p><br>
-  <input type="checkbox" name="Agriculture" value="Agriculture"> Agriculture<br>
-  <input type="checkbox" name="Animal Breeding and Care" value="Animal Breeding and Care"> Animal Breeding and Care<br>
-  <input type="checkbox" name="Architecture" value="Architecture"> Architecture<br>
-  <input type="checkbox" name="Earth" value="Earth"> Earth<br>
-  <input type="checkbox" name="Design" value="Design"> Design<br>
-  <input type="checkbox" name="Buisness" value="Buisness"> Buisness<br>
-  <input type="checkbox" name="Communication and Media" value="Engineering"> Engineering<br>
-  <input type="checkbox" name="Construction Trade" value="Construction Trade"> Construction Trade<br>
-  <input type="checkbox" name="Education and Academy" value="Education and Academy"> Education and Academy<br>
-  <input type="checkbox" name="Fraternal and Social Organization" value="Fraternal and Social Organization"> Fraternal and Social Organization<br>
-  <input type="checkbox" name="Life and Enviornmental Science" value="Life and Enviornmental Science"> Life and Enviornmental Science<br>
-  <input type="checkbox" name="Physical Science" value="Physical Science"> Physical Science<br>
-  <input type="checkbox" name="Engineering" value="Engineering"> Engineering<br>
-  <input type="checkbox" name="Social Science" value="Social Science"> Social Science<br>
-  <input type="checkbox" name="Government" value="Government"> Government<br>
-  <input type="checkbox" name="Health Care and Medicine" value="Health Care and Medicine"> Health Care and Medicine<br>
-  <input type="checkbox" name="Mental Health" value="Mental Health"> Mental Health<br>
-  <input type="checkbox" name="Military" value="Military"> Military<br>
-  <input type="checkbox" name="Real Estate" value="Real Estate"> Real Estate<br>
-  <input type="checkbox" name="Service Organization" value="Service Organization"> Service Organization<br>
-  <input type="checkbox" name="Sports and Athletics" value="Sports and Athletics"> Sports and Athletics<br>
-  <input type="checkbox" name="Travel and Transportation" value="Travel and Transportation"> Travel and Transportation<br>
-  <input type="checkbox" name="Wildlife and Enviornmental Stewardship" value="Wildlife and Enviornmental Stewardship"> Wildlife and Enviornmental Stewardship<br>
-  <input type="checkbox" name="All" value="All"> All<br><br>
-
-  <p><b>Format</b></p><br>
-  <input type="checkbox" name="Print Guide" value="Print Guide"> Print Guide<br>
-  <input type="checkbox" name="Full Text" value="Full Text"> Full Text<br>
-  <input type="checkbox" name="All" value="All"> All<br><br>
-  <input type="submit" value="Submit">
+        <select class="select" name="years">
+            <option selected>Years</option>
+            <option>Option-1</option>
+            <option>Option-2</option>
+            <option>Option-3</option>
+        </select>
+        
+        <select class="select" name="Search by language">
+            <option selected>Language</option>
+            <option>Option-1</option>
+            <option>Option-2</option>
+            <option>Option-3</option>
+        </select>
+    </div>
+    
+    <h2>Categories</h2>
+    
+    <div class="advsearch">
+        <div class="catcolumn">    
+            <input type="checkbox" name="Agriculture" value="Agriculture"> Agriculture<br>
+            <input type="checkbox" name="Animal Breeding and Care" value="Animal Breeding and Care"> Animal Breeding and Care<br>
+            <input type="checkbox" name="Architecture" value="Architecture"> Architecture<br>
+            <input type="checkbox" name="Earth" value="Earth"> Earth<br>
+            <input type="checkbox" name="Design" value="Design"> Design<br>
+            <input type="checkbox" name="Business" value="Business"> Business<br>
+            <input type="checkbox" name="Communication and Media" value="Engineering"> Engineering<br>
+            <input type="checkbox" name="Construction Trade" value="Construction Trade"> Construction Trade<br>
+            <input type="checkbox" name="Education and Academy" value="Education and Academy"> Education and Academics<br>
+            <input type="checkbox" name="Fraternal and Social Organization" value="Fraternal and Social Organization"> Fraternal and Social Organization<br>
+            <input type="checkbox" name="Life and Enviornmental Science" value="Life and Enviornmental Science"> Life and Enviornmental Science<br>
+            <input type="checkbox" name="Physical Science" value="Physical Science"> Physical Science<br>
+            <input type="checkbox" name="Engineering" value="Engineering"> Engineering<br>
+            <input type="checkbox" name="Social Science" value="Social Science"> Social Science<br>
+            <input type="checkbox" name="Government" value="Government"> Government<br>
+            <input type="checkbox" name="Health Care and Medicine" value="Health Care and Medicine"> Health Care and Medicine<br>
+            <input type="checkbox" name="Mental Health" value="Mental Health"> Mental Health<br>
+            <input type="checkbox" name="Military" value="Military"> Military<br>
+            <input type="checkbox" name="Real Estate" value="Real Estate"> Real Estate<br>
+            <input type="checkbox" name="Service Organization" value="Service Organization"> Service Organization<br>
+            <input type="checkbox" name="Sports and Athletics" value="Sports and Athletics"> Sports and Athletics<br>
+            <input type="checkbox" name="Travel and Transportation" value="Travel and Transportation"> Travel and Transportation<br>
+            <input type="checkbox" name="Wildlife and Enviornmental Stewardship" value="Wildlife and Enviornmental Stewardship"> Wildlife and Enviornmental Stewardship<br>
+            <input type="checkbox" name="All" value="All"> All<br>
+        </div>
+    </div>
+        
+    <h2>Format</h2>
+        
+    <div class="advsearch">
+        <div class="catcolumn">
+            <input type="checkbox" name="Print Guide" value="Print Guide"> Print Guide<br>
+            <input type="checkbox" name="Full Text" value="Full Text"> Full Text<br>
+            <input type="checkbox" name="All" value="All"> All<br>
+        </div>
+        <button type="submit" class="button">SUBMIT</button>
+    </div>
+    
+<!-- Footer -->
+<footer class="column">
+        <h5>RESOURCES</h5>
+            <ul>
+                <li><a class="flinks" href="http://ethics.iit.edu/ecodes/node/5621">Print Guide</a></li>
+                <li><a class="flinks" href="http://ethics.iit.edu/ecodes/node/5421">Collection Policy</a></li>
+                <li><a class="flinks" href="http://ethics.iit.edu/ecodes/bibliography">Bibliography</a></li>
+                <li><a class="flinks" href="http://ethics.iit.edu/ecodes/introduction">Why Codes?</a></li>
+            </ul>
+      
+        <h5>ETHICS @ IIT</h5>
+            <ul>
+                <li><a class="flinks" href="http://ethics.iit.edu/ecodes/about">About</a></li>
+                <li><a class="flinks" href="http://ethics.iit.edu/ecodes/authoring-code">Authoring a Code</a></li>
+                <li><a class="flinks" href="http://ethics.iit.edu/">CSEP</a></li>
+                <li><a class="flinks" href="http://ethicscodescollection.blogspot.com/">News and Updates</a></li>
+            </ul>
+    <div>
+        <h5>SUBSCRIBE TO THE CSEP</h5>  
+            <form>
+                <input type="text" id="emailbar" value="" placeholder="Email Address">
+                <button type="submit" id="emailbutton">SUBSCRIBE</button>
+            </form>
+    </div>
+            <ul>
+                <li><a class="flinks" href="https://www.facebook.com/CSEPIllinoisTech/"><i class="icon-facebook"></i></a></li>
+                <li><a class="flinks" href="https://twitter.com/csep1"><i class="icon-twitter"></i></a></li>
+                <li><a class="flinks" href="http://cseplibrary.blogspot.com/"><i class="icon-blogpost"></i></a></li>
+                <li><a class="flinks" href="http://feeds2.feedburner.com/CsepLibrary"><i class="icon-feedburner"></i></a></li>
+            </ul>
+    
+    <!--<div id="footer-wrapper">
+            <h5>Center for the Study of Ethics in the Professions</h5>
+                <p>
+                Hermann Hall
+                <br> 
+                3241 S Federal Street, Room 204 
+                <br> 
+                Chicago, IL 60616
+                </p>
+                <p>
+                Tel 312.567.3017 | <a href="mailto:csep@iit.edu"> csep@iit.edu</a>
+                </p>
+    </div>  -->
+</footer>
 </body>
 </html>

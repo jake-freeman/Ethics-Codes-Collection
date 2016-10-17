@@ -65,6 +65,11 @@ h1 {
     margin-left: 0.5em;
 }
 
+h2 {
+    font-size: 1.5em;
+  
+}
+
 h5 {
     color: #ffffff;
     font-size: 1.1em;
@@ -99,6 +104,11 @@ footer {
     width: 100%;
 }
 
+.advsearch {
+    padding: 1.5em;
+    font-size: 1em;
+}
+
 .button {
     background-color: #e7434e;
     color: antiquewhite;
@@ -113,6 +123,18 @@ footer {
     text-align: center;
     color: #464646;
 }
+
+.catcolumn {
+        -webkit-column-count: 2;
+       -moz-column-count: 2;
+            column-count: 2;
+    -webkit-column-fill: balance;
+       -moz-column-fill: balance;
+            column-fill: balance;
+    font-size: 1em;
+    padding-bottom: 1em;
+}
+
 .column {
     -webkit-column-count: 3;
        -moz-column-count: 3;
@@ -120,6 +142,7 @@ footer {
     -webkit-column-fill: balance;
        -moz-column-fill: balance;
             column-fill: balance;
+    margin-top: 1em;
 }
 .flinks {
     color: gray;
@@ -151,12 +174,25 @@ footer {
     font-size: 1em;    
 }
 
+.select {
+    display: inline-flex;
+    padding: 3em;
+    font-size: 1.2em;
+}
+
 .stemcat {
     padding: 1em;
     border: 1px solid darkgray;
     border-radius: 1em;
     margin-top: 0.5em;
     background-color: #fff;
+}
+
+
+.textfields {
+    display: flex;
+    padding: 0.5em;
+    margin-left: 1em;
 }
 
 
@@ -183,5 +219,6 @@ footer {
     display: inline-block;
     width: 50%;
 }
+
 
 
