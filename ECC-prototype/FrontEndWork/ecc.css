@@ -229,7 +229,7 @@ footer {
     width: 50%;
 }
 
-@media only screen and (max-width: 500px) {
+@media only screen and (max-width: 31.250em) {
     footer {
     display: block;
     width: 100%;
@@ -240,3 +240,4 @@ footer {
     width: 100%;
   
 }
+
