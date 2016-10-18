@@ -144,6 +144,7 @@ footer {
        -moz-column-fill: balance;
             column-fill: balance;
     margin-top: 1em;
+    
 }
 .flinks {
     color: gray;
@@ -228,5 +229,14 @@ footer {
     width: 50%;
 }
 
+@media only screen and (max-width: 500px) {
+    footer {
+    display: block;
+    width: 100%;
 
-
+    }
+  nav{
+    display: block;
+    width: 100%;
+  
+}
