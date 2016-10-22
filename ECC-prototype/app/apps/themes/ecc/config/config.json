@@ -1,0 +1,18 @@
+{
+  "name" : "ECC theme",
+  "description" : "This is the custom theme for the IIT ECC (folder = ecc)",
+  "thumb" : "images/image.png",
+  "settings":[
+    {"label": "Settings", "action_name": "settings"}
+  ],
+
+  "helpers": [
+    "Themes::Ecc::CustomHelper"
+  ],
+  "hooks": {
+    "on_theme_settings": [
+      "theme_default_settings"
+    ],
+    "on_active": ["theme_default_on_install"]
+  }
+}
