@@ -33,7 +33,7 @@ body {
 	line-height: 1;
     background-color: #fff;
     font-family: 'Open Sans', sans-serif;
-    font-size: 1em;
+    font-size: 1.5em;
     margin-left: 1.5em;
 }
 
@@ -43,6 +43,7 @@ nav {
 
 ol, ul {
 	list-style: none;
+    font-size: 0.75em;
 }
 blockquote, q {
 	quotes: none;
@@ -206,27 +207,36 @@ footer {
 
 
 #emailbutton {
-       background-color: #e7434e;
-    color: #fff;
-    height: 3.5em;
-    border-radius: 0.313em;
-}
-
-
-#emailbutton, #search {
     background-color: #e7434e;
     color: #fff;
     height: 3.5em;
     border-radius: 0.313em;
 }
 
-#emailbar, #searchbar {
-    margin-left: 1em;
-    margin-top: 1em;
-    height: 3.5em;
+
+#search {
+    background-color: #e7434e;
+    color: #fff;
     border-radius: 0.313em;
-    display: inline-block;
+    font-size: 1.5em;    
+}
+
+#searchbar {
+    margin-bottom: 1em;
+    margin-top: 1em;
+    border-radius: 0.313em;
+    width: 90%;
+    display: inline-flex;
+    height: 5em;
+    font-size: 0.9em;
+}
+
+#emailbar {
+    margin-top: 1em;
+    border-radius: 0.313em;
     width: 50%;
+    display: inline-flex;
+    height: 3.5em;
 }
 
 @media only screen and (max-width: 31.250em) {
