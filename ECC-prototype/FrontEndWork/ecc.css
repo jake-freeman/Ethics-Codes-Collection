@@ -67,7 +67,9 @@ h1 {
     display: -ms-inline-flexbox;
     display: inline-flex;
     font-size: 2em;
-    margin-left: 0.5em;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+    
 }
 
 h2 {
@@ -218,7 +220,8 @@ footer {
     background-color: #e7434e;
     color: #fff;
     border-radius: 0.313em;
-    font-size: 1.5em;    
+    font-size: 1.5em; 
+    margin-bottom: 1em;
 }
 
 #searchbar {
