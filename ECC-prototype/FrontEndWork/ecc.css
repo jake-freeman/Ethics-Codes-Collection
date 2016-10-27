@@ -34,11 +34,13 @@ body {
     background-color: #fff;
     font-family: 'Open Sans', sans-serif;
     font-size: 1.5em;
-    margin-left: 1.5em;
 }
 
 nav {
     padding: 1em;
+    position: fixed;
+    background-color: lightgray;
+    width: 100%;
 }
 
 ol, ul {
@@ -160,6 +162,7 @@ footer {
 
 .logo {
     width: 100%;
+    margin-top: 3em;
 }
 
 .navhover:hover, .stemcat:hover {
@@ -187,6 +190,14 @@ footer {
 .reference {
     background-color: lightgray;
     
+}
+
+.searchex {
+    border-top: 5px solid darkgray;
+    border-top-width: 100%;
+    font-size: 1em;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
 }
 
 .select {
@@ -237,11 +248,13 @@ footer {
     border-radius: 0.313em;
     font-size: 1.5em; 
     margin-bottom: 1em;
+    margin-left: 0.5em;
 }
 
 #searchbar {
     margin-bottom: 1em;
     margin-top: 1em;
+    margin-left: 0.5em;
     border-radius: 0.313em;
     width: 90%;
     display: -webkit-inline-box;
