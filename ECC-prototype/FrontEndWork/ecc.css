@@ -74,12 +74,16 @@ h1 {
 
 h2 {
     font-size: 1.5em;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
   
 }
 
 h5 {
-    color: #ffffff;
+    color: black;
     font-size: 1.1em;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
 }
 
 img {
@@ -103,6 +107,7 @@ a {
 
 p {
     padding: 1em;
+    font-size: 0.8em;
 }
 
 footer {
@@ -179,6 +184,11 @@ footer {
     font-size: 1em;    
 }
 
+.reference {
+    border-top: dashed darkgray;
+    
+}
+
 .select {
     display: inline-flex;
     padding: 3em;
@@ -205,6 +215,7 @@ footer {
 }
 #disclaimer {
     font-style: italic;
+    font-size: 0.7em;
 }
 
 
