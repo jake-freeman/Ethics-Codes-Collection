@@ -190,6 +190,8 @@ footer {
 }
 
 .select {
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
     display: inline-flex;
     padding: 3em;
     font-size: 1.2em;
@@ -205,6 +207,8 @@ footer {
 
 
 .textfields {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     padding: 0.5em;
     margin-left: 1em;
@@ -240,6 +244,8 @@ footer {
     margin-top: 1em;
     border-radius: 0.313em;
     width: 90%;
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
     display: inline-flex;
     height: 5em;
     font-size: 0.9em;
@@ -251,7 +257,8 @@ footer {
     margin-top: 1em;
     border-radius: 0.313em;
     width: 50%;
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
     display: inline-flex;
     height: 3.5em;
 }
-
