@@ -3,10 +3,10 @@
    License: none (public domain)
 */
 
-html, body, div, span, applet, object, iframe,
+html, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
+del, dfn, em, ins, kbd, q, s, samp,
 small, strike, strong, sub, sup, tt, var,
 b, u, i, center,
 dl, dt, dd, ol, ul, li,
@@ -43,16 +43,19 @@ nav {
 
 ol, ul {
 	list-style: none;
-    font-size: 0.75em;
+    font-size: 0.8em;
 }
+
 blockquote, q {
 	quotes: none;
 }
+
 blockquote:before, blockquote:after,
 q:before, q:after {
 	content: '';
 	content: none;
 }
+
 table {
 	border-collapse: collapse;
 	border-spacing: 0;
@@ -64,17 +67,27 @@ h1 {
     display: -ms-inline-flexbox;
     display: inline-flex;
     font-size: 2em;
-    margin-left: 0.5em;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+    
 }
 
 h2 {
     font-size: 1.5em;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
   
 }
 
 h5 {
-    color: #ffffff;
+    color: black;
     font-size: 1.1em;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+}
+
+img {
+    width: 30%;
 }
 
 li {
@@ -82,11 +95,8 @@ li {
 }
 
 figure {
-    padding: 1em;
-}
-
-img {
-    width: 30%;
+    padding-top: 1em;
+    padding-bottom: 1em;
 }
 
 a {
@@ -97,13 +107,12 @@ a {
 
 p {
     padding: 1em;
+    font-size: 0.8em;
 }
 
 footer {
     background-color: darkslategrey;
     padding: 2em;
-    display: inline-flex;
-    width: 100%;
 }
 
 .advsearch {
@@ -114,11 +123,9 @@ footer {
 .button {
     background-color: #e7434e;
     color: antiquewhite;
-    font-size: 1em;
     border-radius: 1em;
-    padding: 0.5em;
-    padding-left: 2em;
-    padding-right: 2em;
+    padding: 2%;
+    font-size: 80%;
 }
 
 .banner {
@@ -177,7 +184,14 @@ footer {
     font-size: 1em;    
 }
 
+.reference {
+    background-color: lightgray;
+    
+}
+
 .select {
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
     display: inline-flex;
     padding: 3em;
     font-size: 1.2em;
@@ -193,6 +207,8 @@ footer {
 
 
 .textfields {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     padding: 0.5em;
     margin-left: 1em;
@@ -203,6 +219,7 @@ footer {
 }
 #disclaimer {
     font-style: italic;
+    font-size: 0.7em;
 }
 
 
@@ -218,7 +235,8 @@ footer {
     background-color: #e7434e;
     color: #fff;
     border-radius: 0.313em;
-    font-size: 1.5em;    
+    font-size: 1.5em; 
+    margin-bottom: 1em;
 }
 
 #searchbar {
@@ -226,28 +244,21 @@ footer {
     margin-top: 1em;
     border-radius: 0.313em;
     width: 90%;
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
     display: inline-flex;
     height: 5em;
     font-size: 0.9em;
+    border-color: slategray;
+    border-width: 0.5em;
 }
 
 #emailbar {
     margin-top: 1em;
     border-radius: 0.313em;
     width: 50%;
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
     display: inline-flex;
     height: 3.5em;
 }
-
-@media only screen and (max-width: 31.250em) {
-    footer {
-    display: block;
-    width: 100%;
-
-    }
-  nav{
-    display: block;
-    width: 100%;
-  
-}
-
