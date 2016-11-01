@@ -34,12 +34,15 @@ body {
     background-color: #fff;
     font-family: 'Open Sans', sans-serif;
     font-size: 1.5em;
-    margin-left: 1.5em;
 }
 
 nav {
-    padding: 1em;
+    display: block;
+    width: 100%;
+    min-height: 2em;
+    margin: 1em 0;
 }
+
 
 ol, ul {
 	list-style: none;
@@ -189,6 +192,19 @@ footer {
     
 }
 
+.scrollsample {
+    color: #e7434e;
+    text-align: center;
+}
+
+.searchex {
+    border-top: 5px solid darkgray;
+    border-top-width: 100%;
+    font-size: 1em;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+}
+
 .select {
     display: -webkit-inline-box;
     display: -ms-inline-flexbox;
@@ -237,11 +253,13 @@ footer {
     border-radius: 0.313em;
     font-size: 1.5em; 
     margin-bottom: 1em;
+    margin-left: 0.5em;
 }
 
 #searchbar {
     margin-bottom: 1em;
     margin-top: 1em;
+    margin-left: 0.5em;
     border-radius: 0.313em;
     width: 90%;
     display: -webkit-inline-box;
@@ -262,3 +280,42 @@ footer {
     display: inline-flex;
     height: 3.5em;
 }
+
+@media screen and (max-width: 56.875em) {
+    
+    nav {
+        position: relative;
+        width: 100%;
+        min-height: 2em;
+        margin: 1em 0;
+    }
+
+    .nav ul {
+        margin: 0;
+        padding: 0.25em 0;
+        width: 9em;
+        position: absolute;
+        top: 0;
+        left: 0;
+        border: solid 0.05em #aaa;
+        background: #fff url(icon-menu.png) no-repeat 10px 11px;
+        border-radius: 5px;
+        box-shadow: 0 1px 2px rgba(0,0,0,.3);
+    }
+
+    .nav li {
+        display: none;
+        margin: 0em;
+    }
+
+    .nav a {
+        display: block;
+        padding: 0.25 0.25em 0.25em 1.6em;
+        text-align: left;
+    }
+    
+    
+}
+    
+
+
