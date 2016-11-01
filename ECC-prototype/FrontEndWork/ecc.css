@@ -192,6 +192,11 @@ footer {
     
 }
 
+.scrollsample {
+    color: #e7434e;
+    text-align: center;
+}
+
 .searchex {
     border-top: 5px solid darkgray;
     border-top-width: 100%;
