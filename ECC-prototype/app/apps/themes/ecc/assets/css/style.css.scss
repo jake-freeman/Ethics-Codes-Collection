@@ -783,8 +783,8 @@ img.wp-smiley,
 	border-left: 1px solid #f2f2f2;
 	border-right: 1px solid #f2f2f2;
 	margin: 0 auto;
-	max-width: 1600px;
 	width: 100%;
+  max-width: 1600px;
 }
 
 .site-main {
@@ -815,7 +815,7 @@ img.wp-smiley,
  * ----------------------------------------------------------------------------
  */
 .site-header{
-	background: asset-url("themes/default/assets/images/circle.png") no-repeat scroll center top / 1600px auto;
+	background: asset-url("themes/ecc/assets/images/imgs/ECC-Banner.png") no-repeat scroll left top / 1600px auto;
 }
 
 .site-header {

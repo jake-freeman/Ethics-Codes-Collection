@@ -19,6 +19,12 @@ GIT
       activesupport (> 5.x)
       builder (~> 3.1)
 
+PATH
+  remote: apps/plugins/code
+  specs:
+    code (0.1.0)
+      rails (~> 5.0.0, >= 5.0.0.1)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -219,6 +225,7 @@ DEPENDENCIES
   activemodel-serializers-xml!
   byebug
   camaleon_cms (>= 2.3.6)
+  code!
   coffee-rails (~> 4.2)
   draper!
   jbuilder (~> 2.5)
@@ -237,4 +244,4 @@ DEPENDENCIES
   web-console
 
 BUNDLED WITH
-   1.13.5
+   1.13.6
