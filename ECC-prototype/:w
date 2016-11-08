@@ -14,7 +14,7 @@ csep_eecodes-test:
 
 default: &default
   adapter: mysql2
-  database: csep_eecodes-test
+  database: ecc_codes
   username: csep-test
   password: Ethics$12
   port: 3306
