@@ -33,7 +33,7 @@ body {
 	line-height: 1;
     background-color: #fff;
     font-family: 'Open Sans', sans-serif;
-    font-size: 1.5em;
+    font-size: 1em;
 }
 
 nav {
@@ -69,14 +69,14 @@ h1 {
     display: -webkit-inline-box;
     display: -ms-inline-flexbox;
     display: inline-flex;
-    font-size: 2em;
+    font-size: 1.5em;
     padding-top: 0.5em;
     padding-bottom: 0.5em;
     
 }
 
 h2 {
-    font-size: 1.5em;
+    font-size: 1.25em;
     padding-top: 0.5em;
     padding-bottom: 0.5em;
   
@@ -84,7 +84,7 @@ h2 {
 
 h5 {
     color: black;
-    font-size: 1.1em;
+    font-size: .8em;
     padding-top: 0.5em;
     padding-bottom: 0.5em;
 }
@@ -155,6 +155,7 @@ footer {
        -moz-column-fill: balance;
             column-fill: balance;
     margin-top: 1em;
+    display: block;
     
 }
 .flinks {
@@ -163,6 +164,9 @@ footer {
 
 .logo {
     width: 100%;
+}
+.category_image{
+  width: 60%;
 }
 
 .navhover:hover, .stemcat:hover {
@@ -321,4 +325,30 @@ footer {
 
 strong {
   font-weight: bold;
+}
+
+@media only screen and (max-width: 750px) {
+.column {
+    -webkit-column-count: 2;
+       -moz-column-count: 2;
+            column-count: 2;
+    -webkit-column-fill: balance;
+       -moz-column-fill: balance;
+            column-fill: balance;
+    margin-top: 1em;
+    display: block;
+    
+}
+@media only screen and (max-width: 400px) {
+.column {
+    -webkit-column-count: 1;
+       -moz-column-count: 1;
+            column-count: 1;
+    -webkit-column-fill: balance;
+       -moz-column-fill: balance;
+            column-fill: balance;
+    margin-top: 1em;
+    display: block;
+    
+}
 }
