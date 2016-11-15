@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161108200621) do
+ActiveRecord::Schema.define(version: 20161113003902) do
 
   create_table "access", primary_key: "aid", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string  "mask",             default: "", null: false
@@ -658,6 +658,14 @@ ActiveRecord::Schema.define(version: 20161108200621) do
   create_table "ds_view_modes", primary_key: "view_mode", id: :string, limit: 64, default: "", comment: "The machine name of the view mode.", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", comment: "The table that holds custom view modes managed by Display..." do |t|
     t.string "label",    limit: 32,         default: "", null: false, comment: "The label of the view mode."
     t.binary "entities", limit: 4294967295,                           comment: "The entities for this view mode."
+  end
+
+  create_table "ecc_codes", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=latin1" do |t|
+    t.string   "code_title",                                 null: false
+    t.integer  "org_id",                                     null: false
+    t.datetime "year",                                       null: false
+    t.datetime "date_pub",   default: '2016-11-11 07:26:48', null: false
+    t.index ["org_id"], name: "index_ecc_codes_on_org_id", using: :btree
   end
 
   create_table "facetapi", primary_key: "name", id: :string, default: "", comment: "The machine readable name of the configuration.", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", comment: "Facet configurations." do |t|
@@ -1751,6 +1759,37 @@ ActiveRecord::Schema.define(version: 20161108200621) do
     t.text     "settings",    limit: 65535
     t.datetime "created_at"
     t.datetime "updated_at"
+  end
+
+  create_table "plugins_ecc", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=latin1" do |t|
+    t.integer "site_id"
+    t.index ["site_id"], name: "index_plugins_ecc_on_site_id", using: :btree
+  end
+
+  create_table "plugins_ecc_codes", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=latin1" do |t|
+    t.string   "code_title",                                                 null: false
+    t.text     "code_content", limit: 65535,                                 null: false
+    t.integer  "org_id",                                                     null: false
+    t.datetime "code_year",                                                  null: false
+    t.datetime "date_pub",                   default: '2016-11-12 10:03:53', null: false
+    t.index ["org_id"], name: "index_plugins_ecc_codes_on_org_id", using: :btree
+  end
+
+  create_table "plugins_ecc_objects", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=latin1" do |t|
+    t.string "name", null: false
+  end
+
+  create_table "plugins_ecc_orgs", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=latin1" do |t|
+    t.string  "name"
+    t.text    "desc",   limit: 65535
+    t.integer "ecc_id"
+    t.index ["ecc_id"], name: "index_plugins_ecc_orgs_on_ecc_id", using: :btree
+  end
+
+  create_table "plugins_ecc_static_pages", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=latin1" do |t|
+    t.string "title",                 null: false
+    t.text   "content", limit: 65535, null: false
+    t.string "type",                  null: false
   end
 
   create_table "popup_onload", primary_key: "popup_id", unsigned: true, force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", comment: "The base table for popup entities." do |t|
