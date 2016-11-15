@@ -11,3 +11,9 @@
  *= require ./style
  *= require ./styles
  */
+
+.new_ob {
+  color: blue;
+  width: 100%;
+}
+

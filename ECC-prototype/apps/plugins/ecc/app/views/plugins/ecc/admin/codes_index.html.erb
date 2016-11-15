@@ -1,0 +1,31 @@
+<div class="panel panel-default">
+    <div class="panel-heading">
+      <div class="row">
+        <div class="col-md-12">
+          <h4 class="pull-left">Ethics Codes</h4>
+          <%=button_to "New Code", new_admin_plugins_ecc_ecc_code_path, method: :get, class: 'pull-right' %>
+        </div>
+      </div>
+    </div>
+    <div class="panel-body">  
+      <% if @codes.empty? %>
+        <h4> No Codes to Display </h4>
+      <% else %>
+        <table class="table table-responsive table-hover table-striped" id="posts-table-list">                                                                            
+          <thead>                                                                                                                                                         
+            <th> Code Title </th> 
+            <th> Code Year </th>                                                                                                                                        
+          </thead>                                                                                                                                                        
+          <tbody>                                                                                                                                                         
+            <% @codes.each do |code| %>                                                                                                                                     
+              <tr>                                                                                                                                                        
+                <td><%= link_to code.code_title, {action: :show, id: code.id }%></td>                    
+                <td><%= code.code_year %></td> 
+              </tr>                                                                                                                                                       
+            <% end %>                                                                                                                                                     
+          </tbody>                                                                                                                                                        
+        </table>                                                                                                                                                          
+        <%= will_paginate @codes %>
+      <% end %>
+    </div>
+</div>

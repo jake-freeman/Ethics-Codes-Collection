@@ -20,4 +20,13 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
-  hello: "Hello world"
+  plugin: 
+    ecc:
+      ecc: "Ecc"
+      all_eccs: 'All ECC Objects'
+      new_ecc: 'New ECC Object'
+      edit_ecc: 'Edit ECC Object'
+      new_code: "New Code"
+      new_org: "New Organization"
+      all_orgs: "Organizations"
+      all_codes: "Codes"

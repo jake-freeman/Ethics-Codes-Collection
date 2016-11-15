@@ -1,0 +1,21 @@
+{
+  "title": "Ecc",
+  "descr": "",
+  "key": "ecc", // must be the name of the folder of your plugin, sample: app/views/plugins/<my_plugin> ==> 'my_plugin'
+  "helpers": [
+    "Plugins::Ecc::MainHelper"
+  ],
+  "hooks": {
+    "on_active": [
+      "ecc_on_active"
+    ],
+    "admin_before_load": [
+      "ecc_admin_before_load"
+    ],
+
+    "on_inactive": [
+      "ecc_on_inactive"
+    ]
+    //here you can add all your hooks (read documentation)
+  }
+}

@@ -28,7 +28,7 @@ gem 'jbuilder', '~> 2.5'
 # gem 'bcrypt', '~> 3.1.7'
 
 # add Camaleon CMS
-gem "camaleon_cms",  '>=2.3.6'
+gem "camaleon_cms",  path: './apps/plugins/camaleon-cms'
 # for rails 5 support
 gem 'activemodel-serializers-xml', git: 'https://github.com/rails/activemodel-serializers-xml'
 gem 'draper', github: 'audionerd/draper', branch: 'rails5'
@@ -59,4 +59,10 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 #################### Camaleon CMS include all gems for plugins and themes #################### 
 require './lib/plugin_routes' 
 instance_eval(PluginRoutes.draw_gems)
+
+
+
+
+
+gem 'ecc', path:  './apps/plugins/ecc/'
 
