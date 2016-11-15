@@ -20,26 +20,6 @@ GIT
       builder (~> 3.1)
 
 PATH
-  remote: ./apps/plugins/camaleon-cms
-  specs:
-    camaleon_cms (2.3.6)
-      aws-sdk (~> 2)
-      bcrypt
-      breadcrumbs_on_rails
-      cama_contact_form (~> 0.0.14)
-      cancancan (~> 1.10)
-      coffee-rails
-      draper (>= 1.3)
-      font-awesome-rails
-      jquery-rails
-      meta-tags (~> 2.0)
-      mini_magick
-      sass-rails
-      tinymce-rails (~> 4.3)
-      will_paginate
-      will_paginate-bootstrap
-
-PATH
   remote: apps/plugins/ecc
   specs:
     ecc (0.1.0)
@@ -86,18 +66,34 @@ GEM
       minitest (~> 5.1)
       tzinfo (~> 1.1)
     arel (7.1.1)
-    aws-sdk (2.6.18)
-      aws-sdk-resources (= 2.6.18)
-    aws-sdk-core (2.6.18)
+    aws-sdk (2.6.11)
+      aws-sdk-resources (= 2.6.11)
+    aws-sdk-core (2.6.11)
       jmespath (~> 1.0)
-    aws-sdk-resources (2.6.18)
-      aws-sdk-core (= 2.6.18)
+    aws-sdk-resources (2.6.11)
+      aws-sdk-core (= 2.6.11)
     bcrypt (3.1.11)
     breadcrumbs_on_rails (3.0.1)
     builder (3.2.2)
     byebug (9.0.5)
-    cama_contact_form (0.0.14)
+    cama_contact_form (0.0.12)
       rails
+    camaleon_cms (2.3.6)
+      aws-sdk (~> 2)
+      bcrypt
+      breadcrumbs_on_rails
+      cama_contact_form (~> 0.0.11)
+      cancancan (~> 1.10)
+      coffee-rails
+      draper (>= 1.3)
+      font-awesome-rails
+      jquery-rails
+      meta-tags (~> 2.0)
+      mini_magick
+      sass-rails
+      tinymce-rails (~> 4.3)
+      will_paginate
+      will_paginate-bootstrap
     cancancan (1.15.0)
     coffee-rails (4.2.1)
       coffee-script (>= 2.2.0)
@@ -111,7 +107,7 @@ GEM
     erubis (2.7.0)
     execjs (2.7.0)
     ffi (1.9.14)
-    font-awesome-rails (4.7.0.0)
+    font-awesome-rails (4.6.3.1)
       railties (>= 3.2, < 5.1)
     globalid (0.3.7)
       activesupport (>= 4.1.0)
@@ -228,7 +224,7 @@ PLATFORMS
 DEPENDENCIES
   activemodel-serializers-xml!
   byebug
-  camaleon_cms!
+  camaleon_cms
   coffee-rails (~> 4.2)
   draper!
   ecc!
