@@ -1,0 +1,55 @@
+                                     plugins_ecc_index GET            (/:locale)/plugins/ecc/index(.:format)                                          plugins/ecc/front#index {:locale=>/en/}
+                              plugins_ecc_static_pages GET            (/:locale)/plugins/ecc/static_pages(.:format)                                   plugins/ecc/static_pages#index {:locale=>/en/}
+                                                       POST           (/:locale)/plugins/ecc/static_pages(.:format)                                   plugins/ecc/static_pages#create {:locale=>/en/}
+                           new_plugins_ecc_static_page GET            (/:locale)/plugins/ecc/static_pages/new(.:format)                               plugins/ecc/static_pages#new {:locale=>/en/}
+                          edit_plugins_ecc_static_page GET            (/:locale)/plugins/ecc/static_pages/:id/edit(.:format)                          plugins/ecc/static_pages#edit {:locale=>/en/}
+                               plugins_ecc_static_page GET            (/:locale)/plugins/ecc/static_pages/:id(.:format)                               plugins/ecc/static_pages#show {:locale=>/en/}
+                                                       PATCH          (/:locale)/plugins/ecc/static_pages/:id(.:format)                               plugins/ecc/static_pages#update {:locale=>/en/}
+                                                       PUT            (/:locale)/plugins/ecc/static_pages/:id(.:format)                               plugins/ecc/static_pages#update {:locale=>/en/}
+                                                       DELETE         (/:locale)/plugins/ecc/static_pages/:id(.:format)                               plugins/ecc/static_pages#destroy {:locale=>/en/}
+                               admin_plugins_ecc_index GET            /admin/plugins/ecc/index(.:format)                                              plugins/ecc/admin#index
+                            admin_plugins_ecc_settings GET            /admin/plugins/ecc/settings(.:format)                                           plugins/ecc/admin/settings#index
+                            admin_plugins_ecc_ecc_orgs GET            /admin/plugins/ecc/eccs/:ecc_id/orgs(.:format)                                  plugins/ecc/admin/orgs#index
+                                                       POST           /admin/plugins/ecc/eccs/:ecc_id/orgs(.:format)                                  plugins/ecc/admin/orgs#create
+                         new_admin_plugins_ecc_ecc_org GET            /admin/plugins/ecc/eccs/:ecc_id/orgs/new(.:format)                              plugins/ecc/admin/orgs#new
+                        edit_admin_plugins_ecc_ecc_org GET            /admin/plugins/ecc/eccs/:ecc_id/orgs/:id/edit(.:format)                         plugins/ecc/admin/orgs#edit
+                             admin_plugins_ecc_ecc_org GET            /admin/plugins/ecc/eccs/:ecc_id/orgs/:id(.:format)                              plugins/ecc/admin/orgs#show
+                                                       PATCH          /admin/plugins/ecc/eccs/:ecc_id/orgs/:id(.:format)                              plugins/ecc/admin/orgs#update
+                                                       PUT            /admin/plugins/ecc/eccs/:ecc_id/orgs/:id(.:format)                              plugins/ecc/admin/orgs#update
+                                                       DELETE         /admin/plugins/ecc/eccs/:ecc_id/orgs/:id(.:format)                              plugins/ecc/admin/orgs#destroy
+                           admin_plugins_ecc_ecc_codes GET            /admin/plugins/ecc/eccs/:ecc_id/codes(.:format)                                 plugins/ecc/admin/codes#index
+                                                       POST           /admin/plugins/ecc/eccs/:ecc_id/codes(.:format)                                 plugins/ecc/admin/codes#create
+                        new_admin_plugins_ecc_ecc_code GET            /admin/plugins/ecc/eccs/:ecc_id/codes/new(.:format)                             plugins/ecc/admin/codes#new
+                       edit_admin_plugins_ecc_ecc_code GET            /admin/plugins/ecc/eccs/:ecc_id/codes/:id/edit(.:format)                        plugins/ecc/admin/codes#edit
+                            admin_plugins_ecc_ecc_code GET            /admin/plugins/ecc/eccs/:ecc_id/codes/:id(.:format)                             plugins/ecc/admin/codes#show
+                                                       PATCH          /admin/plugins/ecc/eccs/:ecc_id/codes/:id(.:format)                             plugins/ecc/admin/codes#update
+                                                       PUT            /admin/plugins/ecc/eccs/:ecc_id/codes/:id(.:format)                             plugins/ecc/admin/codes#update
+                                                       DELETE         /admin/plugins/ecc/eccs/:ecc_id/codes/:id(.:format)                             plugins/ecc/admin/codes#destroy
+                                admin_plugins_ecc_eccs GET            /admin/plugins/ecc/eccs(.:format)                                               plugins/ecc/admin/eccs#index
+                                                       POST           /admin/plugins/ecc/eccs(.:format)                                               plugins/ecc/admin/eccs#create
+                             new_admin_plugins_ecc_ecc GET            /admin/plugins/ecc/eccs/new(.:format)                                           plugins/ecc/admin/eccs#new
+                            edit_admin_plugins_ecc_ecc GET            /admin/plugins/ecc/eccs/:id/edit(.:format)                                      plugins/ecc/admin/eccs#edit
+                                 admin_plugins_ecc_ecc GET            /admin/plugins/ecc/eccs/:id(.:format)                                           plugins/ecc/admin/eccs#show
+                                                       PATCH          /admin/plugins/ecc/eccs/:id(.:format)                                           plugins/ecc/admin/eccs#update
+                                                       PUT            /admin/plugins/ecc/eccs/:id(.:format)                                           plugins/ecc/admin/eccs#update
+                                                       DELETE         /admin/plugins/ecc/eccs/:id(.:format)                                           plugins/ecc/admin/eccs#destroy
+                   plugins_cama_contact_form_save_form POST           (/:locale)/plugins/cama_contact_form/save_form(.:format)                        plugins/cama_contact_form/front#save_form {:locale=>/en/}
+  admin_plugins_cama_contact_form_admin_form_responses GET            /admin/plugins/cama_contact_form/admin_forms/:admin_form_id/responses(.:format) plugins/cama_contact_form/admin_forms#responses
+item_field_admin_plugins_cama_contact_form_admin_forms GET            /admin/plugins/cama_contact_form/admin_forms/item_field(.:format)               plugins/cama_contact_form/admin_forms#item_field
+           admin_plugins_cama_contact_form_admin_forms GET            /admin/plugins/cama_contact_form/admin_forms(.:format)                          plugins/cama_contact_form/admin_forms#index
+                                                       POST           /admin/plugins/cama_contact_form/admin_forms(.:format)                          plugins/cama_contact_form/admin_forms#create
+        new_admin_plugins_cama_contact_form_admin_form GET            /admin/plugins/cama_contact_form/admin_forms/new(.:format)                      plugins/cama_contact_form/admin_forms#new
+       edit_admin_plugins_cama_contact_form_admin_form GET            /admin/plugins/cama_contact_form/admin_forms/:id/edit(.:format)                 plugins/cama_contact_form/admin_forms#edit
+            admin_plugins_cama_contact_form_admin_form GET            /admin/plugins/cama_contact_form/admin_forms/:id(.:format)                      plugins/cama_contact_form/admin_forms#show
+                                                       PATCH          /admin/plugins/cama_contact_form/admin_forms/:id(.:format)                      plugins/cama_contact_form/admin_forms#update
+                                                       PUT            /admin/plugins/cama_contact_form/admin_forms/:id(.:format)                      plugins/cama_contact_form/admin_forms#update
+                                                       DELETE         /admin/plugins/cama_contact_form/admin_forms/:id(.:format)                      plugins/cama_contact_form/admin_forms#destroy
+                             toggle_cama_admin_plugins GET            /admin/plugins/toggle(.:format)                                                 camaleon_cms/admin/plugins#toggle
+                             cama_admin_plugin_upgrade GET            /admin/plugins/:plugin_id/upgrade(.:format)                                     camaleon_cms/admin/plugins#upgrade
+                                    cama_admin_plugins GET            /admin/plugins(.:format)                                                        camaleon_cms/admin/plugins#index
+                                     cama_admin_plugin DELETE         /admin/plugins/:id(.:format)                                                    camaleon_cms/admin/plugins#destroy
+                         admin_plugins_attack_settings GET            /admin/plugins/attack/settings(.:format)                                        plugins/attack/admin#settings
+                                                       POST           /admin/plugins/attack/settings(.:format)                                        plugins/attack/admin#save_settings
+                    admin_plugins_front_cache_settings GET            /admin/plugins/front_cache/settings(.:format)                                   plugins/front_cache/admin#settings
+                       admin_plugins_front_cache_clean GET            /admin/plugins/front_cache/clean(.:format)                                      plugins/front_cache/admin#clean_cache
+                                                       POST           /admin/plugins/front_cache/settings(.:format)                                   plugins/front_cache/admin#save_settings

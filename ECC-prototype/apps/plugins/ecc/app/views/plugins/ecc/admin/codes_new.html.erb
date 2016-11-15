@@ -1,0 +1,19 @@
+<div class="content-frame">
+    <%= form_for @code, as: "code", url: {action: "create"}, html: {class: "new_ob"} do |f| %>
+    <% @yrs = (Time.now.year).downto(Time.now.year - 100).to_a %>
+      <%= f.label "Code Title:" %><em class="text-danger">*</em>
+        <%= f.text_field :code_title %>
+      <%= f.label "Content:" %><em class="text-danger">*</em>
+        <%= f.text_field :code_content %><em class="text-danger">*</em>
+      <%= f.label "Code Year" %>
+      <%= f.date_select :code_year, :start_year => (Time.now.year - 100)%>
+      <%= f.label "Organization" %>
+        <%= f.select(:org_id) do %>
+          <%= @orgs.each do |c| -%>
+            <%= content_tag(:option, c.name, value: c.id) %>
+          <% end %>
+        <% end %>
+    <%= f.submit "Create" %>
+  <% end %>
+
+</div>

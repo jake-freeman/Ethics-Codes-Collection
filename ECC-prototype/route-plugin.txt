@@ -1,0 +1,20 @@
+             plugins_ecc_index GET      (/:locale)/plugins/ecc/index(.:format)                   plugins/ecc/front#index {:locale=>/en/}
+       admin_plugins_ecc_index GET      /admin/plugins/ecc/index(.:format)                       plugins/ecc/admin#index
+    admin_plugins_ecc_settings GET      /admin/plugins/ecc/settings(.:format)                    plugins/ecc/admin/settings#index
+    admin_plugins_ecc_ecc_orgs GET      /admin/plugins/ecc/eccs/:ecc_id/orgs(.:format)           plugins/ecc/admin/orgs#index
+                               POST     /admin/plugins/ecc/eccs/:ecc_id/orgs(.:format)           plugins/ecc/admin/orgs#create
+ new_admin_plugins_ecc_ecc_org GET      /admin/plugins/ecc/eccs/:ecc_id/orgs/new(.:format)       plugins/ecc/admin/orgs#new
+edit_admin_plugins_ecc_ecc_org GET      /admin/plugins/ecc/eccs/:ecc_id/orgs/:id/edit(.:format)  plugins/ecc/admin/orgs#edit
+     admin_plugins_ecc_ecc_org GET      /admin/plugins/ecc/eccs/:ecc_id/orgs/:id(.:format)       plugins/ecc/admin/orgs#show
+                               PATCH    /admin/plugins/ecc/eccs/:ecc_id/orgs/:id(.:format)       plugins/ecc/admin/orgs#update
+                               PUT      /admin/plugins/ecc/eccs/:ecc_id/orgs/:id(.:format)       plugins/ecc/admin/orgs#update
+                               DELETE   /admin/plugins/ecc/eccs/:ecc_id/orgs/:id(.:format)       plugins/ecc/admin/orgs#destroy
+        admin_plugins_ecc_eccs GET      /admin/plugins/ecc/eccs(.:format)                        plugins/ecc/admin/eccs#index
+                               POST     /admin/plugins/ecc/eccs(.:format)                        plugins/ecc/admin/eccs#create
+     new_admin_plugins_ecc_ecc GET      /admin/plugins/ecc/eccs/new(.:format)                    plugins/ecc/admin/eccs#new
+    edit_admin_plugins_ecc_ecc GET      /admin/plugins/ecc/eccs/:id/edit(.:format)               plugins/ecc/admin/eccs#edit
+         admin_plugins_ecc_ecc GET      /admin/plugins/ecc/eccs/:id(.:format)                    plugins/ecc/admin/eccs#show
+                               PATCH    /admin/plugins/ecc/eccs/:id(.:format)                    plugins/ecc/admin/eccs#update
+                               PUT      /admin/plugins/ecc/eccs/:id(.:format)                    plugins/ecc/admin/eccs#update
+                               DELETE   /admin/plugins/ecc/eccs/:id(.:format)                    plugins/ecc/admin/eccs#destroy
+             cama_post_type_22 GET      (/:locale)/:post_type_slug(.:format)                     camaleon_cms/frontend#post_type {:post_type_id=>22, :locale=>/en/, :post_type_slug=>/(ecc)/}

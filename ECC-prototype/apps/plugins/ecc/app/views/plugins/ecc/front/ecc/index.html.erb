@@ -1,0 +1,19 @@
+<%#= javascript_include_tag plugin_gem_asset("js/my_file.js") %>
+
+<h2> Welcome to the Ethics Codes Collection Site!</h2>
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <div class="row">
+      <div class="col-md-12">
+      </div>
+    </div>
+</div> 
+<div class="panel-body">
+  <% if @static_pages.empty? %>
+    <h4> Please setup your landing {home} page </h4>
+  <% else %>
+    <h1> <% @static_pages.title %> </h1>
+    <p> <% @static_pages.content %> </p>
+  <% end %>
+  </div>
+</div>             

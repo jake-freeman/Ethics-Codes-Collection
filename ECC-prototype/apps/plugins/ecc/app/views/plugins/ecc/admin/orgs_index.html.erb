@@ -1,0 +1,31 @@
+<div class="panel panel-default">
+    <div class="panel-heading">
+      <div class="row">
+        <div class="col-md-12">
+          <h4 class="pull-left">Organizations</h4>
+          <%=button_to "New Organization", new_admin_plugins_ecc_ecc_org_path, method: :get, class: 'pull-right' %>
+        </div>
+      </div>
+    </div>
+    <div class="panel-body">  
+      <% if @orgs.empty? %>
+        <h4> No Organizations To Display </h4>
+      <% else %>
+        <table class="table table-responsive table-hover table-striped" id="posts-table-list">
+          <thead>
+            <th> Name </th>
+            <th> Description </th>
+          </thead>
+          <tbody>
+            <% @orgs.each do |org| %>
+              <tr>
+                <td><%= link_to org.name, {action: :show, id: org.id }%></td>
+                <td><%= org.desc %></td>
+              </tr>
+            <% end %> 
+          </tbody>
+        </table>
+    <%= will_paginate @orgs %>
+    <% end %>
+    </div>
+</div>
