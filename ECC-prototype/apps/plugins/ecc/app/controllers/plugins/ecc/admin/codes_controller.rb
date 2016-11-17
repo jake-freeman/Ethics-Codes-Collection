@@ -1,14 +1,10 @@
 class Plugins::Ecc::Admin::CodesController < Plugins::Ecc::AdminController
-<<<<<<< HEAD
-<<<<<<< 930019e2a15235305d8845d57180109c3e1995a3
+<<<<<<< 41b42c23c8bf60613e8e78613a48aaa3844e9fa7
   before_action :set_ecc
   before_action :set_code, only: ['show','edit','update','destroy']
 =======
   before_action :set_code, :set_org, only: ['show','edit','update','destroy']
 >>>>>>> updated some frontend, backend functioning well
-=======
-  before_action :set_code, :set_org, only: ['show','edit','update','destroy']
->>>>>>> 511a6f686bda3c6076659563d5aac2407778f993
   include Plugins::Ecc
 
   def index
