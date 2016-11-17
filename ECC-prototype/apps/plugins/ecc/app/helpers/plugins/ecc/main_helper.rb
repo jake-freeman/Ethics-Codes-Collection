@@ -25,12 +25,8 @@ module Plugins::Ecc::MainHelper
      pt = current_site.post_types.hidden_menu.where(slug: "ecc").first
     if pt.present?
       items_i = []
-<<<<<<< 41b42c23c8bf60613e8e78613a48aaa3844e9fa7
       items_i << {icon: "list", title: t('plugin.ecc.all_eccs'), url: admin_plugins_ecc_eccs_path} 
-=======
-      items_i << {icon: "list", title: t('plugin.ecc.all_pages'), url: admin_plugins_ecc_ecc_staticpages_path(pt.id)}
->>>>>>> updated some frontend, backend functioning well
-      items_i << {icon: "list", title: t('plugin.ecc.all_orgs'), url: admin_plugins_ecc_ecc_orgs_path(pt.id)} 
+     items_i << {icon: "list", title: t('plugin.ecc.all_orgs'), url: admin_plugins_ecc_ecc_orgs_path(pt.id)} 
        items_i << {icon: "list", title: t('plugin.ecc.all_codes'), url: admin_plugins_ecc_ecc_codes_path(pt.id)} 
      if pt.manage_categories?
         items_i << {icon: "folder-open", title: t('camaleon_cms.admin.post_type.categories'), url: cama_admin_post_type_categories_path(pt.id)} if can? :categories, pt
