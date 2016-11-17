@@ -1,0 +1,15 @@
+<div class="panel panel-default">
+
+    <div class="panel-heading">
+      <div class="row">
+        <div class="col-md-12">
+          <h4 class="pull-left"><%= @page.title %></h4>
+          <%=button_to "Edit Page", edit_admin_plugins_ecc_ecc_staticpage_path, method: :get, class: 'pull-right' %> 
+          <%=button_to "Delete",  admin_plugins_ecc_ecc_staticpage_path(@page), method: :delete, data: { confirm: 'Are you sure?' },  class: 'pull-right' %>
+        </div>
+      </div>
+    </div>
+    <div class="panel-body">
+      <%= @page.content %>
+    </div>
+</div>

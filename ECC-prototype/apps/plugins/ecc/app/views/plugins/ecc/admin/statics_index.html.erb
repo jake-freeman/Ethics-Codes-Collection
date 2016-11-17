@@ -2,30 +2,27 @@
     <div class="panel-heading">
       <div class="row">
         <div class="col-md-12">
-          <h4 class="pull-left">Ethics Codes</h4>
-          <%=button_to "New Code", new_admin_plugins_ecc_ecc_code_path, method: :get, class: 'pull-right' %>
+          <h4 class="pull-left">Ethics Codes Collection: Static Pages</h4>
+          <%=button_to "New Page", new_admin_plugins_ecc_ecc_staticpage_path, method: :get, class: 'pull-right' %>
         </div>
       </div>
     </div>
     <div class="panel-body">  
-      <% if @codes.empty? %>
-        <h4> No Codes to Display </h4>
+      <% if @pages.empty? %>
+        <h4> No Content</h4>
       <% else %>
-        <table class="table table-responsive table-hover table-striped" id="posts-table-list">
+        <table class="table table-responsive table-hover table-striped" id="posts-table-list">                                                                            
           <thead>                                                                                                                                                         
-            <th> Code Title </th> 
-            <th> Code Year </th>                                                                                                                                        
+            <th> Page </th> 
           </thead>                                                                                                                                                        
           <tbody>                                                                                                                                                         
-            <% @codes.each do |code| %>                                                                                                                                     
+            <% @pagetype.each do |page| %>                                                                                                                                     
               <tr>                                                                                                                                                        
-                <td><%= link_to code.code_title, {action: :show, id: code.id }%></td>                    
-                <td><%= code.code_year %></td> 
+                <td><%= link_to page.description, {action: :show, id: page.id }%></td>
               </tr>                                                                                                                                                       
             <% end %>                                                                                                                                                     
           </tbody>                                                                                                                                                        
         </table>                                                                                                                                                          
-        <%= will_paginate @codes %>
       <% end %>
     </div>
 </div>

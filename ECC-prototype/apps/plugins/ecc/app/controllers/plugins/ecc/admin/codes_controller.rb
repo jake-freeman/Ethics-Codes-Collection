@@ -1,6 +1,14 @@
 class Plugins::Ecc::Admin::CodesController < Plugins::Ecc::AdminController
+<<<<<<< HEAD
+<<<<<<< 930019e2a15235305d8845d57180109c3e1995a3
   before_action :set_ecc
   before_action :set_code, only: ['show','edit','update','destroy']
+=======
+  before_action :set_code, :set_org, only: ['show','edit','update','destroy']
+>>>>>>> updated some frontend, backend functioning well
+=======
+  before_action :set_code, :set_org, only: ['show','edit','update','destroy']
+>>>>>>> 511a6f686bda3c6076659563d5aac2407778f993
   include Plugins::Ecc
 
   def index
@@ -15,10 +23,11 @@ class Plugins::Ecc::Admin::CodesController < Plugins::Ecc::AdminController
   end
 
   def show
-#    render 'orgs_show'
+    render 'codes_show'
   end
 
   def edit
+    render 'codes_edit'
   end
 
   def create
@@ -27,25 +36,32 @@ class Plugins::Ecc::Admin::CodesController < Plugins::Ecc::AdminController
     r = {code: @code}; hooks_run('code_create', r)
     if @code.save
       r = {code: @code}; hooks_run('code_created', r)
-      flash[:notice] = t('camaleon_cms.admin.user.message.created')
-#      redirect_to action: :show
+      flash[:notice] = 'New Code created'
+      redirect_to action: 'index'
     else
       new
     end
   end
-
+  def destroy
+    @code = Codes.find(params[:id])
+    @code.destroy
+    redirect_to action: 'index'
+  end
   def update
+    up_code = params.require(:code).permit(:code_title, :code_content)
+    if @code.update(up_code)
+      redirect_to action: :show
+    else
+      render 'edit'
+    end
   end
 
 
   private
-  def set_ecc
-    @ecc = current_site.eccs.where(id: 22)
-  rescue ActiveRecord::RecordNotFound
-    flash[:alert] = "Ecc not found"
-    redirect_to orgs_path
-  end
   def set_code
     @code = Codes.find(params[:id])
+  end
+  def set_org
+    @org = Orgs.find(@code.org_id)
   end
 end

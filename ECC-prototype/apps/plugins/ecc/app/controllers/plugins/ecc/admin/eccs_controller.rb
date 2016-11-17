@@ -1,9 +1,8 @@
 class Plugins::Ecc::Admin::EccsController < Plugins::Ecc::AdminController
   before_action :set_ecc, only: ['show','edit','update','destroy']
-
+  include Plugins::Ecc
   def index
-#    @ecc = current_site.ecc
-    @ecc = current_site.eccs.paginate(:page => params[:page], :per_page => current_site.admin_per_page)
+    @ecc = Eccs.paginate(:page => params[:page], :per_page => current_site.admin_per_page)
     render 
   end
 
