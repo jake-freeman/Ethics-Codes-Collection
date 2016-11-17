@@ -1,6 +1,10 @@
 class Plugins::Ecc::Admin::CodesController < Plugins::Ecc::AdminController
+<<<<<<< 930019e2a15235305d8845d57180109c3e1995a3
   before_action :set_ecc
   before_action :set_code, only: ['show','edit','update','destroy']
+=======
+  before_action :set_code, :set_org, only: ['show','edit','update','destroy']
+>>>>>>> updated some frontend, backend functioning well
   include Plugins::Ecc
 
   def index
@@ -39,12 +43,6 @@ class Plugins::Ecc::Admin::CodesController < Plugins::Ecc::AdminController
 
 
   private
-  def set_ecc
-    @ecc = current_site.eccs.where(id: 22)
-  rescue ActiveRecord::RecordNotFound
-    flash[:alert] = "Ecc not found"
-    redirect_to orgs_path
-  end
   def set_code
     @code = Codes.find(params[:id])
   end
