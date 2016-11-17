@@ -1,5 +1,4 @@
 class Plugins::Ecc::Admin::OrgsController < Plugins::Ecc::AdminController
-  before_action :set_ecc
   before_action :set_org, only: ['show','edit','update','destroy']
   include Plugins::Ecc
   def index
@@ -50,12 +49,6 @@ class Plugins::Ecc::Admin::OrgsController < Plugins::Ecc::AdminController
   end
 
   private
-  def set_ecc
-    @ecc = current_site.eccs.where(id: 22)
-  rescue ActiveRecord::RecordNotFound
-    flash[:alert] = "Ecc not found"
-    redirect_to orgs_path
-  end
   def set_org
     @org = Orgs.find(params[:id])
   end

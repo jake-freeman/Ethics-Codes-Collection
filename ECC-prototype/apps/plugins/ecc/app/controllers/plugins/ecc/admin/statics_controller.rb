@@ -1,5 +1,4 @@
 class Plugins::Ecc::Admin::StaticsController < Plugins::Ecc::AdminController
-#  before_action :set_ecc
   before_action :set_page, only: ['show','edit','update','destroy']
   before_action :set_pagetype
   include Plugins::Ecc
@@ -37,7 +36,7 @@ class Plugins::Ecc::Admin::StaticsController < Plugins::Ecc::AdminController
     pid = @pagetype.to_hash
     new_page.pagetype_id = pid['id']
     new_page.save
-    redirect_to action: :show
+    redirect_to action: :index
   end
   def update
     up_page = params.require(:page).permit(:title, :content, :pagetype)
@@ -50,9 +49,6 @@ class Plugins::Ecc::Admin::StaticsController < Plugins::Ecc::AdminController
 
 
   private
-  def set_ecc
-    @ecc = Ecc.find(22)
-  end
   def set_pagetype
     @pagetype = Staticpages.find_by_sql("Select * from plugins_ecc_pagetypes")
   end

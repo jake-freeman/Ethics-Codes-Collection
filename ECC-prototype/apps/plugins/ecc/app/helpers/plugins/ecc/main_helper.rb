@@ -25,7 +25,6 @@ module Plugins::Ecc::MainHelper
      pt = current_site.post_types.hidden_menu.where(slug: "ecc").first
     if pt.present?
       items_i = []
-      items_i << {icon: "list", title: t('plugin.ecc.all_eccs'), url: admin_plugins_ecc_eccs_path}
       items_i << {icon: "list", title: t('plugin.ecc.all_pages'), url: admin_plugins_ecc_ecc_staticpages_path(pt.id)}
       items_i << {icon: "list", title: t('plugin.ecc.all_orgs'), url: admin_plugins_ecc_ecc_orgs_path(pt.id)} 
        items_i << {icon: "list", title: t('plugin.ecc.all_codes'), url: admin_plugins_ecc_ecc_codes_path(pt.id)} 

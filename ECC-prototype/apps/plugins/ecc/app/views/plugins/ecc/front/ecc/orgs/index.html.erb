@@ -1,0 +1,32 @@
+<%#= javascript_include_tag plugin_gem_asset("js/my_file.js") %>
+
+<h2> Welcome to the Ethics Codes Collection Site!</h2>
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <div class="row">
+      <div class="col-md-12">
+      </div>
+    </div>
+</div> 
+<div class="panel-body">
+  <% if @codes.empty? %>
+    <h4> No Codes To Display! </h4>
+  <% else %>
+    <table class="table table-responsive table-hover table-striped">
+      <thead>
+        <th> Code Title </th>
+        <th> Code Year </th>
+      </thead>
+      <tbody>
+        <% @codes.each do |code| %>
+        <tr>
+          <td><%= link_to code.code_title, {action: :show, id: code.id} %></td>
+          <td><%= code.code_year %></td>
+        </tr>
+        <% end %>
+      </tbody>
+      </table>
+  <% end %>
+  <%= will_paginate @codes %>
+  </div>
+</div>             

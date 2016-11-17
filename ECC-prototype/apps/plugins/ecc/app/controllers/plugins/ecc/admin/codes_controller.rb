@@ -1,5 +1,4 @@
 class Plugins::Ecc::Admin::CodesController < Plugins::Ecc::AdminController
-  before_action :set_ecc
   before_action :set_code, :set_org, only: ['show','edit','update','destroy']
   include Plugins::Ecc
 
@@ -50,12 +49,6 @@ class Plugins::Ecc::Admin::CodesController < Plugins::Ecc::AdminController
 
 
   private
-  def set_ecc
-    @ecc = current_site.eccs.where(id: 22)
-  rescue ActiveRecord::RecordNotFound
-    flash[:alert] = "Ecc not found"
-    redirect_to orgs_path
-  end
   def set_code
     @code = Codes.find(params[:id])
   end
