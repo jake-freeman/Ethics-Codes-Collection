@@ -1,0 +1,13 @@
+<div class="content-frame">
+    <%= form_for @code, as: "code", url: admin_plugins_ecc_ecc_code_path(@code), method: :patch, html: {class: "edit_ob"} do |f| %>
+    <% @yrs = (Time.now.year).downto(Time.now.year - 100).to_a %>
+      <%= f.label "Code Title:" %><em class="text-danger">*</em>
+        <%= f.text_field :code_title %>
+      <%= f.label "Content:" %><em class="text-danger">*</em>
+        <%= f.text_field :code_content %><em class="text-danger">*</em>
+      <%= f.label "Code Year" %>
+      <%= f.date_select :code_year, :start_year => (Time.now.year - 100)%>
+    <%= f.submit "Update" %>
+  <% end %>
+
+</div>

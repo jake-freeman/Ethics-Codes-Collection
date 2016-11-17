@@ -1,6 +1,6 @@
 class Plugins::Ecc::Admin::CodesController < Plugins::Ecc::AdminController
   before_action :set_ecc
-  before_action :set_code, only: ['show','edit','update','destroy']
+  before_action :set_code, :set_org, only: ['show','edit','update','destroy']
   include Plugins::Ecc
 
   def index
@@ -15,10 +15,11 @@ class Plugins::Ecc::Admin::CodesController < Plugins::Ecc::AdminController
   end
 
   def show
-#    render 'orgs_show'
+    render 'codes_show'
   end
 
   def edit
+    render 'codes_edit'
   end
 
   def create
@@ -27,14 +28,24 @@ class Plugins::Ecc::Admin::CodesController < Plugins::Ecc::AdminController
     r = {code: @code}; hooks_run('code_create', r)
     if @code.save
       r = {code: @code}; hooks_run('code_created', r)
-      flash[:notice] = t('camaleon_cms.admin.user.message.created')
-#      redirect_to action: :show
+      flash[:notice] = 'New Code created'
+      redirect_to action: 'index'
     else
       new
     end
   end
-
+  def destroy
+    @code = Codes.find(params[:id])
+    @code.destroy
+    redirect_to action: 'index'
+  end
   def update
+    up_code = params.require(:code).permit(:code_title, :code_content)
+    if @code.update(up_code)
+      redirect_to action: :show
+    else
+      render 'edit'
+    end
   end
 
 
@@ -47,5 +58,8 @@ class Plugins::Ecc::Admin::CodesController < Plugins::Ecc::AdminController
   end
   def set_code
     @code = Codes.find(params[:id])
+  end
+  def set_org
+    @org = Orgs.find(@code.org_id)
   end
 end

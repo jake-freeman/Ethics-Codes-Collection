@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161113003902) do
+ActiveRecord::Schema.define(version: 20161116021112) do
 
   create_table "access", primary_key: "aid", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string  "mask",             default: "", null: false
@@ -1786,10 +1786,15 @@ ActiveRecord::Schema.define(version: 20161113003902) do
     t.index ["ecc_id"], name: "index_plugins_ecc_orgs_on_ecc_id", using: :btree
   end
 
+  create_table "plugins_ecc_pagetypes", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=latin1" do |t|
+    t.text "description", limit: 65535
+  end
+
   create_table "plugins_ecc_static_pages", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=latin1" do |t|
-    t.string "title",                 null: false
-    t.text   "content", limit: 65535, null: false
-    t.string "type",                  null: false
+    t.string  "title",                  null: false
+    t.text    "content",  limit: 65535, null: false
+    t.integer "pagetype",               null: false
+    t.index ["pagetype"], name: "page_page_type_id2_fk", using: :btree
   end
 
   create_table "popup_onload", primary_key: "popup_id", unsigned: true, force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", comment: "The base table for popup entities." do |t|
@@ -1946,168 +1951,6 @@ ActiveRecord::Schema.define(version: 20161113003902) do
     t.index ["ssid"], name: "ssid", using: :btree
     t.index ["timestamp"], name: "timestamp", using: :btree
     t.index ["uid"], name: "uid", using: :btree
-  end
-
-  create_table "spina_accounts", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=latin1" do |t|
-    t.string   "name"
-    t.string   "address"
-    t.string   "postal_code"
-    t.string   "city"
-    t.string   "phone"
-    t.string   "email"
-    t.text     "preferences",    limit: 65535
-    t.string   "logo"
-    t.datetime "created_at",                                   null: false
-    t.datetime "updated_at",                                   null: false
-    t.string   "kvk_identifier"
-    t.string   "vat_identifier"
-    t.boolean  "robots_allowed",               default: false
-  end
-
-  create_table "spina_attachment_collections", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=latin1" do |t|
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "spina_attachment_collections_attachments", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=latin1" do |t|
-    t.integer "attachment_collection_id"
-    t.integer "attachment_id"
-  end
-
-  create_table "spina_attachments", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=latin1" do |t|
-    t.string   "file"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "spina_colors", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=latin1" do |t|
-    t.text     "content",    limit: 65535
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  create_table "spina_inquiries", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=latin1" do |t|
-    t.string   "name"
-    t.string   "email"
-    t.string   "phone"
-    t.text     "message",    limit: 65535
-    t.boolean  "archived",                 default: false
-    t.datetime "created_at",                               null: false
-    t.datetime "updated_at",                               null: false
-    t.boolean  "spam"
-  end
-
-  create_table "spina_layout_parts", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=latin1" do |t|
-    t.string   "title"
-    t.string   "name"
-    t.integer  "layout_partable_id"
-    t.string   "layout_partable_type"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-    t.integer  "account_id"
-  end
-
-  create_table "spina_lines", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=latin1" do |t|
-    t.string   "content"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  create_table "spina_page_parts", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=latin1" do |t|
-    t.string   "title"
-    t.string   "name"
-    t.datetime "created_at",         null: false
-    t.datetime "updated_at",         null: false
-    t.integer  "page_id"
-    t.integer  "page_partable_id"
-    t.string   "page_partable_type"
-  end
-
-  create_table "spina_pages", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=latin1" do |t|
-    t.string   "title"
-    t.string   "menu_title"
-    t.string   "description"
-    t.boolean  "show_in_menu",        default: true
-    t.string   "slug"
-    t.boolean  "deletable",           default: true
-    t.datetime "created_at",                          null: false
-    t.datetime "updated_at",                          null: false
-    t.string   "name"
-    t.string   "seo_title"
-    t.boolean  "skip_to_first_child", default: false
-    t.string   "view_template"
-    t.string   "layout_template"
-    t.boolean  "draft",               default: false
-    t.string   "link_url"
-    t.string   "ancestry"
-    t.integer  "position"
-    t.string   "materialized_path"
-    t.boolean  "active",              default: true
-  end
-
-  create_table "spina_photo_collections", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=latin1" do |t|
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "spina_photo_collections_photos", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=latin1" do |t|
-    t.integer "photo_collection_id"
-    t.integer "photo_id"
-    t.integer "position"
-  end
-
-  create_table "spina_photos", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=latin1" do |t|
-    t.string   "file"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "spina_rewrite_rules", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=latin1" do |t|
-    t.string   "old_path"
-    t.string   "new_path"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  create_table "spina_structure_items", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=latin1" do |t|
-    t.integer  "structure_id"
-    t.integer  "position"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-    t.index ["structure_id"], name: "index_spina_structure_items_on_structure_id", using: :btree
-  end
-
-  create_table "spina_structure_parts", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=latin1" do |t|
-    t.integer  "structure_item_id"
-    t.integer  "structure_partable_id"
-    t.string   "structure_partable_type"
-    t.string   "name"
-    t.string   "title"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-    t.index ["structure_item_id"], name: "index_spina_structure_parts_on_structure_item_id", using: :btree
-    t.index ["structure_partable_id"], name: "index_spina_structure_parts_on_structure_partable_id", using: :btree
-  end
-
-  create_table "spina_structures", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=latin1" do |t|
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  create_table "spina_texts", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=latin1" do |t|
-    t.text     "content",    limit: 65535
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  create_table "spina_users", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=latin1" do |t|
-    t.string   "name"
-    t.string   "email"
-    t.string   "password_digest"
-    t.boolean  "admin",           default: false
-    t.datetime "created_at",                      null: false
-    t.datetime "updated_at",                      null: false
-    t.datetime "last_logged_in"
   end
 
   create_table "system", primary_key: "filename", id: :string, default: "", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
@@ -2418,4 +2261,5 @@ ActiveRecord::Schema.define(version: 20161113003902) do
   add_foreign_key "ob_to_tag_tables", "object_tables", name: "ob_to_tag_tables_ibfk_1"
   add_foreign_key "ob_to_tag_tables", "tags_tables"
   add_foreign_key "organizations_tables", "object_tables", name: "organizations_tables_ibfk_1"
+  add_foreign_key "plugins_ecc_static_pages", "plugins_ecc_pagetypes", column: "pagetype", name: "page_page_type_id2_fk"
 end

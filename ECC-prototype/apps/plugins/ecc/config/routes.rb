@@ -10,11 +10,11 @@ Rails.application.routes.draw do
         namespace :plugins do
           namespace 'ecc' do
             get 'index' => 'front#index'
-            resources :eccs do 
-              resources :staticpages
-              resources :orgs
-              resources :codes
-            end
+#            resources :eccs, controller: "front/eccs" do 
+#              resources :staticpages, controller: "front/staticpages"
+#              resources :orgs, controller: "front/orgs"
+ #             resources :codes, controller: "front/codes"
+#            end
           end
         end
       end
@@ -28,6 +28,7 @@ Rails.application.routes.draw do
             resources :eccs, controller: "admin/eccs" do
               resources :orgs, controller: "admin/orgs"
               resources :codes, controller: "admin/codes"
+              resources :staticpages, controller: "admin/statics"
               end
           end
         end
