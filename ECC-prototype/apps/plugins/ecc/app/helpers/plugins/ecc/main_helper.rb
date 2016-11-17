@@ -25,11 +25,15 @@ module Plugins::Ecc::MainHelper
      pt = current_site.post_types.hidden_menu.where(slug: "ecc").first
     if pt.present?
       items_i = []
+<<<<<<< HEAD
 <<<<<<< 930019e2a15235305d8845d57180109c3e1995a3
       items_i << {icon: "list", title: t('plugin.ecc.all_eccs'), url: admin_plugins_ecc_eccs_path} 
 =======
       items_i << {icon: "list", title: t('plugin.ecc.all_pages'), url: admin_plugins_ecc_ecc_staticpages_path(pt.id)}
 >>>>>>> updated some frontend, backend functioning well
+=======
+      items_i << {icon: "list", title: t('plugin.ecc.all_pages'), url: admin_plugins_ecc_ecc_staticpages_path(pt.id)}
+>>>>>>> 511a6f686bda3c6076659563d5aac2407778f993
       items_i << {icon: "list", title: t('plugin.ecc.all_orgs'), url: admin_plugins_ecc_ecc_orgs_path(pt.id)} 
        items_i << {icon: "list", title: t('plugin.ecc.all_codes'), url: admin_plugins_ecc_ecc_codes_path(pt.id)} 
      if pt.manage_categories?

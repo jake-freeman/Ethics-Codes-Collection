@@ -1,0 +1,15 @@
+<div class="panel panel-default">
+    <div class="panel-heading">
+      <div class="row">
+        <div class="col-md-12">
+          <h4 class="pull-left"><%= link_to @org.name, {action: :show, id: @org.id } %>: <%= @code.code_title %></h4>
+          <h4 class="pull-right"> <%= @code.code_year %> </h4>
+        </div>
+      </div>
+    </div>
+    <div class="panel-body">
+      <%= @code.code_content %>
+      <%=button_to "Edit Code", edit_admin_plugins_ecc_ecc_code_path, method: :get, class: 'pull-right' %>
+      <%=button_to "Delete",  admin_plugins_ecc_ecc_code_path(@code), method: :delete, data: { confirm: 'Are you sure?' },  class: 'pull-right' %>
+    </div>
+</div>

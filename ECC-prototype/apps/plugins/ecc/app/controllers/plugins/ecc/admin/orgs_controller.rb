@@ -18,6 +18,7 @@ class Plugins::Ecc::Admin::OrgsController < Plugins::Ecc::AdminController
   end
 
   def edit
+    render 'orgs_edit'
   end
 
   def create
@@ -26,16 +27,26 @@ class Plugins::Ecc::Admin::OrgsController < Plugins::Ecc::AdminController
     r = {org: @org}; hooks_run('org_create', r)
     if @org.save
       r = {org: @org}; hooks_run('org_created', r)
-      flash[:notice] = t('camaleon_cms.admin.user.message.created')
-      redirect_to action: :show
+      flash[:notice] = 'New Organization created'
+      redirect_to action: 'index'
     else
       new
     end
   end
 
   def update
+    up_org = params.require(:org).permit(:name, :desc)
+    if @org.update(up_org)
+      redirect_to action: :show
+    else
+      render 'edit'
+    end
   end
-
+  def destroy
+    @org = Orgs.find(params[:id])
+    @org.destroy
+    redirect_to action: 'index'
+  end
 
   private
   def set_org

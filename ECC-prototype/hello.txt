@@ -1,0 +1,285 @@
+                                                Prefix Verb           URI Pattern                                                                     Controller#Action
+                                frontend_codes_display GET            /frontend/codes/display(.:format)                                               frontend/codes#display
+                                     plugins_ecc_index GET            (/:locale)/plugins/ecc/index(.:format)                                          plugins/ecc/front#index {:locale=>/en/}
+                           plugins_ecc_ecc_staticpages GET            (/:locale)/plugins/ecc/eccs/:ecc_id/staticpages(.:format)                       plugins/ecc/staticpages#index {:locale=>/en/}
+                                                       POST           (/:locale)/plugins/ecc/eccs/:ecc_id/staticpages(.:format)                       plugins/ecc/staticpages#create {:locale=>/en/}
+                        new_plugins_ecc_ecc_staticpage GET            (/:locale)/plugins/ecc/eccs/:ecc_id/staticpages/new(.:format)                   plugins/ecc/staticpages#new {:locale=>/en/}
+                       edit_plugins_ecc_ecc_staticpage GET            (/:locale)/plugins/ecc/eccs/:ecc_id/staticpages/:id/edit(.:format)              plugins/ecc/staticpages#edit {:locale=>/en/}
+                            plugins_ecc_ecc_staticpage GET            (/:locale)/plugins/ecc/eccs/:ecc_id/staticpages/:id(.:format)                   plugins/ecc/staticpages#show {:locale=>/en/}
+                                                       PATCH          (/:locale)/plugins/ecc/eccs/:ecc_id/staticpages/:id(.:format)                   plugins/ecc/staticpages#update {:locale=>/en/}
+                                                       PUT            (/:locale)/plugins/ecc/eccs/:ecc_id/staticpages/:id(.:format)                   plugins/ecc/staticpages#update {:locale=>/en/}
+                                                       DELETE         (/:locale)/plugins/ecc/eccs/:ecc_id/staticpages/:id(.:format)                   plugins/ecc/staticpages#destroy {:locale=>/en/}
+                                  plugins_ecc_ecc_orgs GET            (/:locale)/plugins/ecc/eccs/:ecc_id/orgs(.:format)                              plugins/ecc/orgs#index {:locale=>/en/}
+                                                       POST           (/:locale)/plugins/ecc/eccs/:ecc_id/orgs(.:format)                              plugins/ecc/orgs#create {:locale=>/en/}
+                               new_plugins_ecc_ecc_org GET            (/:locale)/plugins/ecc/eccs/:ecc_id/orgs/new(.:format)                          plugins/ecc/orgs#new {:locale=>/en/}
+                              edit_plugins_ecc_ecc_org GET            (/:locale)/plugins/ecc/eccs/:ecc_id/orgs/:id/edit(.:format)                     plugins/ecc/orgs#edit {:locale=>/en/}
+                                   plugins_ecc_ecc_org GET            (/:locale)/plugins/ecc/eccs/:ecc_id/orgs/:id(.:format)                          plugins/ecc/orgs#show {:locale=>/en/}
+                                                       PATCH          (/:locale)/plugins/ecc/eccs/:ecc_id/orgs/:id(.:format)                          plugins/ecc/orgs#update {:locale=>/en/}
+                                                       PUT            (/:locale)/plugins/ecc/eccs/:ecc_id/orgs/:id(.:format)                          plugins/ecc/orgs#update {:locale=>/en/}
+                                                       DELETE         (/:locale)/plugins/ecc/eccs/:ecc_id/orgs/:id(.:format)                          plugins/ecc/orgs#destroy {:locale=>/en/}
+                                 plugins_ecc_ecc_codes GET            (/:locale)/plugins/ecc/eccs/:ecc_id/codes(.:format)                             plugins/ecc/codes#index {:locale=>/en/}
+                                                       POST           (/:locale)/plugins/ecc/eccs/:ecc_id/codes(.:format)                             plugins/ecc/codes#create {:locale=>/en/}
+                              new_plugins_ecc_ecc_code GET            (/:locale)/plugins/ecc/eccs/:ecc_id/codes/new(.:format)                         plugins/ecc/codes#new {:locale=>/en/}
+                             edit_plugins_ecc_ecc_code GET            (/:locale)/plugins/ecc/eccs/:ecc_id/codes/:id/edit(.:format)                    plugins/ecc/codes#edit {:locale=>/en/}
+                                  plugins_ecc_ecc_code GET            (/:locale)/plugins/ecc/eccs/:ecc_id/codes/:id(.:format)                         plugins/ecc/codes#show {:locale=>/en/}
+                                                       PATCH          (/:locale)/plugins/ecc/eccs/:ecc_id/codes/:id(.:format)                         plugins/ecc/codes#update {:locale=>/en/}
+                                                       PUT            (/:locale)/plugins/ecc/eccs/:ecc_id/codes/:id(.:format)                         plugins/ecc/codes#update {:locale=>/en/}
+                                                       DELETE         (/:locale)/plugins/ecc/eccs/:ecc_id/codes/:id(.:format)                         plugins/ecc/codes#destroy {:locale=>/en/}
+                                      plugins_ecc_eccs GET            (/:locale)/plugins/ecc/eccs(.:format)                                           plugins/ecc/eccs#index {:locale=>/en/}
+                                                       POST           (/:locale)/plugins/ecc/eccs(.:format)                                           plugins/ecc/eccs#create {:locale=>/en/}
+                                   new_plugins_ecc_ecc GET            (/:locale)/plugins/ecc/eccs/new(.:format)                                       plugins/ecc/eccs#new {:locale=>/en/}
+                                  edit_plugins_ecc_ecc GET            (/:locale)/plugins/ecc/eccs/:id/edit(.:format)                                  plugins/ecc/eccs#edit {:locale=>/en/}
+                                       plugins_ecc_ecc GET            (/:locale)/plugins/ecc/eccs/:id(.:format)                                       plugins/ecc/eccs#show {:locale=>/en/}
+                                                       PATCH          (/:locale)/plugins/ecc/eccs/:id(.:format)                                       plugins/ecc/eccs#update {:locale=>/en/}
+                                                       PUT            (/:locale)/plugins/ecc/eccs/:id(.:format)                                       plugins/ecc/eccs#update {:locale=>/en/}
+                                                       DELETE         (/:locale)/plugins/ecc/eccs/:id(.:format)                                       plugins/ecc/eccs#destroy {:locale=>/en/}
+                               admin_plugins_ecc_index GET            /admin/plugins/ecc/index(.:format)                                              plugins/ecc/admin#index
+                            admin_plugins_ecc_settings GET            /admin/plugins/ecc/settings(.:format)                                           plugins/ecc/admin/settings#index
+                            admin_plugins_ecc_ecc_orgs GET            /admin/plugins/ecc/eccs/:ecc_id/orgs(.:format)                                  plugins/ecc/admin/orgs#index
+                                                       POST           /admin/plugins/ecc/eccs/:ecc_id/orgs(.:format)                                  plugins/ecc/admin/orgs#create
+                         new_admin_plugins_ecc_ecc_org GET            /admin/plugins/ecc/eccs/:ecc_id/orgs/new(.:format)                              plugins/ecc/admin/orgs#new
+                        edit_admin_plugins_ecc_ecc_org GET            /admin/plugins/ecc/eccs/:ecc_id/orgs/:id/edit(.:format)                         plugins/ecc/admin/orgs#edit
+                             admin_plugins_ecc_ecc_org GET            /admin/plugins/ecc/eccs/:ecc_id/orgs/:id(.:format)                              plugins/ecc/admin/orgs#show
+                                                       PATCH          /admin/plugins/ecc/eccs/:ecc_id/orgs/:id(.:format)                              plugins/ecc/admin/orgs#update
+                                                       PUT            /admin/plugins/ecc/eccs/:ecc_id/orgs/:id(.:format)                              plugins/ecc/admin/orgs#update
+                                                       DELETE         /admin/plugins/ecc/eccs/:ecc_id/orgs/:id(.:format)                              plugins/ecc/admin/orgs#destroy
+                           admin_plugins_ecc_ecc_codes GET            /admin/plugins/ecc/eccs/:ecc_id/codes(.:format)                                 plugins/ecc/admin/codes#index
+                                                       POST           /admin/plugins/ecc/eccs/:ecc_id/codes(.:format)                                 plugins/ecc/admin/codes#create
+                        new_admin_plugins_ecc_ecc_code GET            /admin/plugins/ecc/eccs/:ecc_id/codes/new(.:format)                             plugins/ecc/admin/codes#new
+                       edit_admin_plugins_ecc_ecc_code GET            /admin/plugins/ecc/eccs/:ecc_id/codes/:id/edit(.:format)                        plugins/ecc/admin/codes#edit
+                            admin_plugins_ecc_ecc_code GET            /admin/plugins/ecc/eccs/:ecc_id/codes/:id(.:format)                             plugins/ecc/admin/codes#show
+                                                       PATCH          /admin/plugins/ecc/eccs/:ecc_id/codes/:id(.:format)                             plugins/ecc/admin/codes#update
+                                                       PUT            /admin/plugins/ecc/eccs/:ecc_id/codes/:id(.:format)                             plugins/ecc/admin/codes#update
+                                                       DELETE         /admin/plugins/ecc/eccs/:ecc_id/codes/:id(.:format)                             plugins/ecc/admin/codes#destroy
+                                admin_plugins_ecc_eccs GET            /admin/plugins/ecc/eccs(.:format)                                               plugins/ecc/admin/eccs#index
+                                                       POST           /admin/plugins/ecc/eccs(.:format)                                               plugins/ecc/admin/eccs#create
+                             new_admin_plugins_ecc_ecc GET            /admin/plugins/ecc/eccs/new(.:format)                                           plugins/ecc/admin/eccs#new
+                            edit_admin_plugins_ecc_ecc GET            /admin/plugins/ecc/eccs/:id/edit(.:format)                                      plugins/ecc/admin/eccs#edit
+                                 admin_plugins_ecc_ecc GET            /admin/plugins/ecc/eccs/:id(.:format)                                           plugins/ecc/admin/eccs#show
+                                                       PATCH          /admin/plugins/ecc/eccs/:id(.:format)                                           plugins/ecc/admin/eccs#update
+                                                       PUT            /admin/plugins/ecc/eccs/:id(.:format)                                           plugins/ecc/admin/eccs#update
+                                                       DELETE         /admin/plugins/ecc/eccs/:id(.:format)                                           plugins/ecc/admin/eccs#destroy
+                                            cama_error GET            /error(.:format)                                                                camaleon_cms/camaleon#render_error
+                                          cama_captcha GET            /captcha(.:format)                                                              camaleon_cms/camaleon#captcha
+                   plugins_cama_contact_form_save_form POST           (/:locale)/plugins/cama_contact_form/save_form(.:format)                        plugins/cama_contact_form/front#save_form {:locale=>/en/}
+  admin_plugins_cama_contact_form_admin_form_responses GET            /admin/plugins/cama_contact_form/admin_forms/:admin_form_id/responses(.:format) plugins/cama_contact_form/admin_forms#responses
+item_field_admin_plugins_cama_contact_form_admin_forms GET            /admin/plugins/cama_contact_form/admin_forms/item_field(.:format)               plugins/cama_contact_form/admin_forms#item_field
+           admin_plugins_cama_contact_form_admin_forms GET            /admin/plugins/cama_contact_form/admin_forms(.:format)                          plugins/cama_contact_form/admin_forms#index
+                                                       POST           /admin/plugins/cama_contact_form/admin_forms(.:format)                          plugins/cama_contact_form/admin_forms#create
+        new_admin_plugins_cama_contact_form_admin_form GET            /admin/plugins/cama_contact_form/admin_forms/new(.:format)                      plugins/cama_contact_form/admin_forms#new
+       edit_admin_plugins_cama_contact_form_admin_form GET            /admin/plugins/cama_contact_form/admin_forms/:id/edit(.:format)                 plugins/cama_contact_form/admin_forms#edit
+            admin_plugins_cama_contact_form_admin_form GET            /admin/plugins/cama_contact_form/admin_forms/:id(.:format)                      plugins/cama_contact_form/admin_forms#show
+                                                       PATCH          /admin/plugins/cama_contact_form/admin_forms/:id(.:format)                      plugins/cama_contact_form/admin_forms#update
+                                                       PUT            /admin/plugins/cama_contact_form/admin_forms/:id(.:format)                      plugins/cama_contact_form/admin_forms#update
+                                                       DELETE         /admin/plugins/cama_contact_form/admin_forms/:id(.:format)                      plugins/cama_contact_form/admin_forms#destroy
+                                            cama_admin GET            /admin(.:format)                                                                camaleon_cms/admin#dashboard
+                                  cama_admin_dashboard GET            /admin/dashboard(.:format)                                                      camaleon_cms/admin#dashboard
+                                       cama_admin_ajax GET            /admin/ajax(.:format)                                                           camaleon_cms/admin#ajax
+                                     cama_admin_search GET            /admin/search(.:format)                                                         camaleon_cms/admin#search
+                                      cama_admin_login GET            /admin/login(.:format)                                                          camaleon_cms/admin/sessions#login
+                                                       POST           /admin/login(.:format)                                                          camaleon_cms/admin/sessions#login_post
+                                     cama_admin_logout GET            /admin/logout(.:format)                                                         camaleon_cms/admin/sessions#logout
+                                     cama_admin_forgot GET|POST|PATCH /admin/forgot(.:format)                                                         camaleon_cms/admin/sessions#forgot
+                              cama_admin_confirm_email GET|POST|PATH  /admin/confirm_email(.:format)                                                  camaleon_cms/admin/sessions#confirm_email
+                                   cama_admin_register GET|POST|PATCH /admin/register(.:format)                                                       camaleon_cms/admin/sessions#register
+                                        cama_admin_api GET|POST       /admin/api/:method(.:format)                                                    camaleon_cms/admin#api
+                       cama_admin_post_type_post_trash GET            /admin/post_type/:post_type_id/posts/:post_id/trash(.:format)                   camaleon_cms/admin/posts#trash
+                     cama_admin_post_type_post_restore GET            /admin/post_type/:post_type_id/posts/:post_id/restore(.:format)                 camaleon_cms/admin/posts#restore
+                       ajax_cama_admin_post_type_posts GET|POST|PATCH /admin/post_type/:post_type_id/posts/ajax(.:format)                             camaleon_cms/admin/posts#ajax
+                            cama_admin_post_type_posts GET            /admin/post_type/:post_type_id/posts(.:format)                                  camaleon_cms/admin/posts#index
+                                                       POST           /admin/post_type/:post_type_id/posts(.:format)                                  camaleon_cms/admin/posts#create
+                         new_cama_admin_post_type_post GET            /admin/post_type/:post_type_id/posts/new(.:format)                              camaleon_cms/admin/posts#new
+                        edit_cama_admin_post_type_post GET            /admin/post_type/:post_type_id/posts/:id/edit(.:format)                         camaleon_cms/admin/posts#edit
+                             cama_admin_post_type_post GET            /admin/post_type/:post_type_id/posts/:id(.:format)                              camaleon_cms/admin/posts#show
+                                                       PATCH          /admin/post_type/:post_type_id/posts/:id(.:format)                              camaleon_cms/admin/posts#update
+                                                       PUT            /admin/post_type/:post_type_id/posts/:id(.:format)                              camaleon_cms/admin/posts#update
+                                                       DELETE         /admin/post_type/:post_type_id/posts/:id(.:format)                              camaleon_cms/admin/posts#destroy
+                  list_cama_admin_post_type_categories GET            /admin/post_type/:post_type_id/categories/list(.:format)                        camaleon_cms/admin/categories#list
+                       cama_admin_post_type_categories GET            /admin/post_type/:post_type_id/categories(.:format)                             camaleon_cms/admin/categories#index
+                                                       POST           /admin/post_type/:post_type_id/categories(.:format)                             camaleon_cms/admin/categories#create
+                     new_cama_admin_post_type_category GET            /admin/post_type/:post_type_id/categories/new(.:format)                         camaleon_cms/admin/categories#new
+                    edit_cama_admin_post_type_category GET            /admin/post_type/:post_type_id/categories/:id/edit(.:format)                    camaleon_cms/admin/categories#edit
+                         cama_admin_post_type_category GET            /admin/post_type/:post_type_id/categories/:id(.:format)                         camaleon_cms/admin/categories#show
+                                                       PATCH          /admin/post_type/:post_type_id/categories/:id(.:format)                         camaleon_cms/admin/categories#update
+                                                       PUT            /admin/post_type/:post_type_id/categories/:id(.:format)                         camaleon_cms/admin/categories#update
+                                                       DELETE         /admin/post_type/:post_type_id/categories/:id(.:format)                         camaleon_cms/admin/categories#destroy
+                   list_cama_admin_post_type_post_tags GET            /admin/post_type/:post_type_id/post_tags/list(.:format)                         camaleon_cms/admin/post_tags#list
+                        cama_admin_post_type_post_tags GET            /admin/post_type/:post_type_id/post_tags(.:format)                              camaleon_cms/admin/post_tags#index
+                                                       POST           /admin/post_type/:post_type_id/post_tags(.:format)                              camaleon_cms/admin/post_tags#create
+                     new_cama_admin_post_type_post_tag GET            /admin/post_type/:post_type_id/post_tags/new(.:format)                          camaleon_cms/admin/post_tags#new
+                    edit_cama_admin_post_type_post_tag GET            /admin/post_type/:post_type_id/post_tags/:id/edit(.:format)                     camaleon_cms/admin/post_tags#edit
+                         cama_admin_post_type_post_tag GET            /admin/post_type/:post_type_id/post_tags/:id(.:format)                          camaleon_cms/admin/post_tags#show
+                                                       PATCH          /admin/post_type/:post_type_id/post_tags/:id(.:format)                          camaleon_cms/admin/post_tags#update
+                                                       PUT            /admin/post_type/:post_type_id/post_tags/:id(.:format)                          camaleon_cms/admin/post_tags#update
+                                                       DELETE         /admin/post_type/:post_type_id/post_tags/:id(.:format)                          camaleon_cms/admin/post_tags#destroy
+                           cama_admin_post_type_drafts GET            /admin/post_type/:post_type_id/drafts(.:format)                                 camaleon_cms/admin/posts/drafts#index
+                                                       POST           /admin/post_type/:post_type_id/drafts(.:format)                                 camaleon_cms/admin/posts/drafts#create
+                        new_cama_admin_post_type_draft GET            /admin/post_type/:post_type_id/drafts/new(.:format)                             camaleon_cms/admin/posts/drafts#new
+                       edit_cama_admin_post_type_draft GET            /admin/post_type/:post_type_id/drafts/:id/edit(.:format)                        camaleon_cms/admin/posts/drafts#edit
+                            cama_admin_post_type_draft GET            /admin/post_type/:post_type_id/drafts/:id(.:format)                             camaleon_cms/admin/posts/drafts#show
+                                                       PATCH          /admin/post_type/:post_type_id/drafts/:id(.:format)                             camaleon_cms/admin/posts/drafts#update
+                                                       PUT            /admin/post_type/:post_type_id/drafts/:id(.:format)                             camaleon_cms/admin/posts/drafts#update
+                                                       DELETE         /admin/post_type/:post_type_id/drafts/:id(.:format)                             camaleon_cms/admin/posts/drafts#destroy
+                            cama_admin_post_type_index GET            /admin/post_type(.:format)                                                      camaleon_cms/admin/post_type#index
+                                                       POST           /admin/post_type(.:format)                                                      camaleon_cms/admin/post_type#create
+                              new_cama_admin_post_type GET            /admin/post_type/new(.:format)                                                  camaleon_cms/admin/post_type#new
+                             edit_cama_admin_post_type GET            /admin/post_type/:id/edit(.:format)                                             camaleon_cms/admin/post_type#edit
+                                  cama_admin_post_type GET            /admin/post_type/:id(.:format)                                                  camaleon_cms/admin/post_type#show
+                                                       PATCH          /admin/post_type/:id(.:format)                                                  camaleon_cms/admin/post_type#update
+                                                       PUT            /admin/post_type/:id(.:format)                                                  camaleon_cms/admin/post_type#update
+                                                       DELETE         /admin/post_type/:id(.:format)                                                  camaleon_cms/admin/post_type#destroy
+                   cama_admin_post_type_taxonomy_posts GET            /admin/post_type/:post_type_id/:taxonomy/:taxonomy_id/posts(.:format)           camaleon_cms/admin/posts#index
+                                    cama_admin_profile GET            /admin/profile(.:format)                                                        camaleon_cms/admin/users#profile
+                               cama_admin_profile_edit GET|POST|PATCH /admin/profile/edit(.:format)                                                   camaleon_cms/admin/users#profile_edit
+                          cama_admin_user_updated_ajax PATCH          /admin/users/:user_id/updated_ajax(.:format)                                    camaleon_cms/admin/users#updated_ajax
+                           impersonate_cama_admin_user GET            /admin/users/:id/impersonate(.:format)                                          camaleon_cms/admin/users#impersonate
+                                      cama_admin_users GET            /admin/users(.:format)                                                          camaleon_cms/admin/users#index
+                                                       POST           /admin/users(.:format)                                                          camaleon_cms/admin/users#create
+                                   new_cama_admin_user GET            /admin/users/new(.:format)                                                      camaleon_cms/admin/users#new
+                                  edit_cama_admin_user GET            /admin/users/:id/edit(.:format)                                                 camaleon_cms/admin/users#edit
+                                       cama_admin_user GET            /admin/users/:id(.:format)                                                      camaleon_cms/admin/users#show
+                                                       PATCH          /admin/users/:id(.:format)                                                      camaleon_cms/admin/users#update
+                                                       PUT            /admin/users/:id(.:format)                                                      camaleon_cms/admin/users#update
+                                                       DELETE         /admin/users/:id(.:format)                                                      camaleon_cms/admin/users#destroy
+                                 cama_admin_user_roles GET            /admin/user_roles(.:format)                                                     camaleon_cms/admin/user_roles#index
+                                                       POST           /admin/user_roles(.:format)                                                     camaleon_cms/admin/user_roles#create
+                              new_cama_admin_user_role GET            /admin/user_roles/new(.:format)                                                 camaleon_cms/admin/user_roles#new
+                             edit_cama_admin_user_role GET            /admin/user_roles/:id/edit(.:format)                                            camaleon_cms/admin/user_roles#edit
+                                  cama_admin_user_role GET            /admin/user_roles/:id(.:format)                                                 camaleon_cms/admin/user_roles#show
+                                                       PATCH          /admin/user_roles/:id(.:format)                                                 camaleon_cms/admin/user_roles#update
+                                                       PUT            /admin/user_roles/:id(.:format)                                                 camaleon_cms/admin/user_roles#update
+                                                       DELETE         /admin/user_roles/:id(.:format)                                                 camaleon_cms/admin/user_roles#destroy
+                        cama_admin_settings_post_types GET            /admin/settings/post_types(.:format)                                            camaleon_cms/admin/settings/post_types#index
+                                                       POST           /admin/settings/post_types(.:format)                                            camaleon_cms/admin/settings/post_types#create
+                     new_cama_admin_settings_post_type GET            /admin/settings/post_types/new(.:format)                                        camaleon_cms/admin/settings/post_types#new
+                    edit_cama_admin_settings_post_type GET            /admin/settings/post_types/:id/edit(.:format)                                   camaleon_cms/admin/settings/post_types#edit
+                         cama_admin_settings_post_type GET            /admin/settings/post_types/:id(.:format)                                        camaleon_cms/admin/settings/post_types#show
+                                                       PATCH          /admin/settings/post_types/:id(.:format)                                        camaleon_cms/admin/settings/post_types#update
+                                                       PUT            /admin/settings/post_types/:id(.:format)                                        camaleon_cms/admin/settings/post_types#update
+                                                       DELETE         /admin/settings/post_types/:id(.:format)                                        camaleon_cms/admin/settings/post_types#destroy
+           get_items_cama_admin_settings_custom_fields POST           /admin/settings/custom_fields/get_items/:key(.:format)                          camaleon_cms/admin/settings/custom_fields#get_items
+             reorder_cama_admin_settings_custom_fields POST           /admin/settings/custom_fields/reorder(.:format)                                 camaleon_cms/admin/settings/custom_fields#reorder
+                     cama_admin_settings_custom_fields GET            /admin/settings/custom_fields(.:format)                                         camaleon_cms/admin/settings/custom_fields#index
+                                                       POST           /admin/settings/custom_fields(.:format)                                         camaleon_cms/admin/settings/custom_fields#create
+                  new_cama_admin_settings_custom_field GET            /admin/settings/custom_fields/new(.:format)                                     camaleon_cms/admin/settings/custom_fields#new
+                 edit_cama_admin_settings_custom_field GET            /admin/settings/custom_fields/:id/edit(.:format)                                camaleon_cms/admin/settings/custom_fields#edit
+                      cama_admin_settings_custom_field GET            /admin/settings/custom_fields/:id(.:format)                                     camaleon_cms/admin/settings/custom_fields#show
+                                                       PATCH          /admin/settings/custom_fields/:id(.:format)                                     camaleon_cms/admin/settings/custom_fields#update
+                                                       PUT            /admin/settings/custom_fields/:id(.:format)                                     camaleon_cms/admin/settings/custom_fields#update
+                                                       DELETE         /admin/settings/custom_fields/:id(.:format)                                     camaleon_cms/admin/settings/custom_fields#destroy
+                              cama_admin_settings_site GET            /admin/settings/site(.:format)                                                  camaleon_cms/admin/settings#site
+                        cama_admin_settings_test_email GET            /admin/settings/test_email(.:format)                                            camaleon_cms/admin/settings#test_email
+                             cama_admin_settings_theme GET            /admin/settings/theme(.:format)                                                 camaleon_cms/admin/settings#theme
+                        cama_admin_settings_save_theme POST           /admin/settings/save_theme(.:format)                                            camaleon_cms/admin/settings#save_theme
+                         cama_admin_settings_languages GET            /admin/settings/languages(.:format)                                             camaleon_cms/admin/settings#languages
+                        cama_admin_settings_shortcodes GET            /admin/settings/shortcodes(.:format)                                            camaleon_cms/admin/settings#shortcodes
+                                                       POST           /admin/settings/languages(.:format)                                             camaleon_cms/admin/settings#save_languages
+                        cama_admin_settings_site_saved PATCH          /admin/settings/site_saved(.:format)                                            camaleon_cms/admin/settings#site_saved
+                             cama_admin_settings_sites GET            /admin/settings/sites(.:format)                                                 camaleon_cms/admin/settings/sites#index
+                                                       POST           /admin/settings/sites(.:format)                                                 camaleon_cms/admin/settings/sites#create
+                          new_cama_admin_settings_site GET            /admin/settings/sites/new(.:format)                                             camaleon_cms/admin/settings/sites#new
+                         edit_cama_admin_settings_site GET            /admin/settings/sites/:id/edit(.:format)                                        camaleon_cms/admin/settings/sites#edit
+                                                       GET            /admin/settings/sites/:id(.:format)                                             camaleon_cms/admin/settings/sites#show
+                                                       PATCH          /admin/settings/sites/:id(.:format)                                             camaleon_cms/admin/settings/sites#update
+                                                       PUT            /admin/settings/sites/:id(.:format)                                             camaleon_cms/admin/settings/sites#update
+                                                       DELETE         /admin/settings/sites/:id(.:format)                                             camaleon_cms/admin/settings/sites#destroy
+                                   cama_admin_comments GET            /admin/comments(.:format)                                                       camaleon_cms/admin/comments#list
+                        cama_admin_post_comment_answer GET            /admin/posts/:post_id/comments/:comment_id/answer(.:format)                     camaleon_cms/admin/comments#answer
+                   cama_admin_post_comment_save_answer POST           /admin/posts/:post_id/comments/:comment_id/save_answer(.:format)                camaleon_cms/admin/comments#save_answer
+                 cama_admin_post_comment_toggle_status GET            /admin/posts/:post_id/comments/:comment_id/toggle_status(.:format)              camaleon_cms/admin/comments#toggle_status
+                              cama_admin_post_comments GET            /admin/posts/:post_id/comments(.:format)                                        camaleon_cms/admin/comments#index
+                                                       POST           /admin/posts/:post_id/comments(.:format)                                        camaleon_cms/admin/comments#create
+                           new_cama_admin_post_comment GET            /admin/posts/:post_id/comments/new(.:format)                                    camaleon_cms/admin/comments#new
+                          edit_cama_admin_post_comment GET            /admin/posts/:post_id/comments/:id/edit(.:format)                               camaleon_cms/admin/comments#edit
+                               cama_admin_post_comment GET            /admin/posts/:post_id/comments/:id(.:format)                                    camaleon_cms/admin/comments#show
+                                                       PATCH          /admin/posts/:post_id/comments/:id(.:format)                                    camaleon_cms/admin/comments#update
+                                                       PUT            /admin/posts/:post_id/comments/:id(.:format)                                    camaleon_cms/admin/comments#update
+                                                       DELETE         /admin/posts/:post_id/comments/:id(.:format)                                    camaleon_cms/admin/comments#destroy
+                        cama_admin_appearances_widgets GET|DELETE     /admin/appearances/widgets(.:format)                                            camaleon_cms/admin/appearances#widgets
+                   cama_admin_appearances_widgets_save POST|PATCH     /admin/appearances/widgets_save(.:format)                                       camaleon_cms/admin/appearances#widgets_save
+                  cama_admin_appearances_widget_delete GET|PATCH      /admin/appearances/widget_delete(.:format)                                      camaleon_cms/admin/appearances#widget_delete
+                    cama_admin_appearances_render_form GET            /admin/appearances/render_form(.:format)                                        camaleon_cms/admin/appearances#render_form
+                 preview_cama_admin_appearances_themes GET            /admin/appearances/themes/preview(.:format)                                     camaleon_cms/admin/appearances/themes#preview
+               load_data_cama_admin_appearances_themes GET|POST|PATCH /admin/appearances/themes/load_data(.:format)                                   camaleon_cms/admin/appearances/themes#load_data
+                         cama_admin_appearances_themes GET            /admin/appearances/themes(.:format)                                             camaleon_cms/admin/appearances/themes#index
+      cama_admin_appearances_nav_menu_delete_menu_item GET            /admin/appearances/nav_menus/:nav_menu_id/item_delete/:id(.:format)             camaleon_cms/admin/appearances/nav_menus#delete_menu_item
+       cama_admin_appearances_nav_menu_custom_settings GET            /admin/appearances/nav_menus/:nav_menu_id/custom_settings/:id(.:format)         camaleon_cms/admin/appearances/nav_menus#custom_settings
+  cama_admin_appearances_nav_menu_save_custom_settings POST           /admin/appearances/nav_menus/:nav_menu_id/save_custom_settings/:id(.:format)    camaleon_cms/admin/appearances/nav_menus#save_custom_settings
+        cama_admin_appearances_nav_menu_edit_menu_item GET            /admin/appearances/nav_menus/:nav_menu_id/edit_menu_item/:id(.:format)          camaleon_cms/admin/appearances/nav_menus#edit_menu_item
+      cama_admin_appearances_nav_menu_update_menu_item POST           /admin/appearances/nav_menus/:nav_menu_id/update_menu_item/:id(.:format)        camaleon_cms/admin/appearances/nav_menus#update_menu_item
+             cama_admin_appearances_nav_menu_add_items POST           /admin/appearances/nav_menus/:nav_menu_id/add_items(.:format)                   camaleon_cms/admin/appearances/nav_menus#add_items
+         cama_admin_appearances_nav_menu_reorder_items POST           /admin/appearances/nav_menus/:nav_menu_id/reorder_items(.:format)               camaleon_cms/admin/appearances/nav_menus#reorder_items
+                      cama_admin_appearances_nav_menus GET            /admin/appearances/nav_menus(.:format)                                          camaleon_cms/admin/appearances/nav_menus#index
+                                                       POST           /admin/appearances/nav_menus(.:format)                                          camaleon_cms/admin/appearances/nav_menus#create
+                   new_cama_admin_appearances_nav_menu GET            /admin/appearances/nav_menus/new(.:format)                                      camaleon_cms/admin/appearances/nav_menus#new
+                  edit_cama_admin_appearances_nav_menu GET            /admin/appearances/nav_menus/:id/edit(.:format)                                 camaleon_cms/admin/appearances/nav_menus#edit
+                       cama_admin_appearances_nav_menu PATCH          /admin/appearances/nav_menus/:id(.:format)                                      camaleon_cms/admin/appearances/nav_menus#update
+                                                       PUT            /admin/appearances/nav_menus/:id(.:format)                                      camaleon_cms/admin/appearances/nav_menus#update
+                                                       DELETE         /admin/appearances/nav_menus/:id(.:format)                                      camaleon_cms/admin/appearances/nav_menus#destroy
+                 cama_admin_appearances_nav_menus_menu GET            /admin/appearances/nav_menus/menu(.:format)                                     camaleon_cms/admin/appearances/nav_menus#index
+             cama_admin_appearances_widgets_main_index GET            /admin/appearances/widgets/main(.:format)                                       camaleon_cms/admin/appearances/widgets/main#index
+                                                       POST           /admin/appearances/widgets/main(.:format)                                       camaleon_cms/admin/appearances/widgets/main#create
+               new_cama_admin_appearances_widgets_main GET            /admin/appearances/widgets/main/new(.:format)                                   camaleon_cms/admin/appearances/widgets/main#new
+              edit_cama_admin_appearances_widgets_main GET            /admin/appearances/widgets/main/:id/edit(.:format)                              camaleon_cms/admin/appearances/widgets/main#edit
+                   cama_admin_appearances_widgets_main PATCH          /admin/appearances/widgets/main/:id(.:format)                                   camaleon_cms/admin/appearances/widgets/main#update
+                                                       PUT            /admin/appearances/widgets/main/:id(.:format)                                   camaleon_cms/admin/appearances/widgets/main#update
+                                                       DELETE         /admin/appearances/widgets/main/:id(.:format)                                   camaleon_cms/admin/appearances/widgets/main#destroy
+        cama_admin_appearances_widgets_sidebar_reorder POST           /admin/appearances/widgets/sidebar/:sidebar_id/reorder(.:format)                camaleon_cms/admin/appearances/widgets/sidebar#reorder
+   cama_admin_appearances_widgets_sidebar_assign_index POST           /admin/appearances/widgets/sidebar/:sidebar_id/assign(.:format)                 camaleon_cms/admin/appearances/widgets/assign#create
+     new_cama_admin_appearances_widgets_sidebar_assign GET            /admin/appearances/widgets/sidebar/:sidebar_id/assign/new(.:format)             camaleon_cms/admin/appearances/widgets/assign#new
+    edit_cama_admin_appearances_widgets_sidebar_assign GET            /admin/appearances/widgets/sidebar/:sidebar_id/assign/:id/edit(.:format)        camaleon_cms/admin/appearances/widgets/assign#edit
+         cama_admin_appearances_widgets_sidebar_assign PATCH          /admin/appearances/widgets/sidebar/:sidebar_id/assign/:id(.:format)             camaleon_cms/admin/appearances/widgets/assign#update
+                                                       PUT            /admin/appearances/widgets/sidebar/:sidebar_id/assign/:id(.:format)             camaleon_cms/admin/appearances/widgets/assign#update
+                                                       DELETE         /admin/appearances/widgets/sidebar/:sidebar_id/assign/:id(.:format)             camaleon_cms/admin/appearances/widgets/assign#destroy
+          cama_admin_appearances_widgets_sidebar_index GET            /admin/appearances/widgets/sidebar(.:format)                                    camaleon_cms/admin/appearances/widgets/sidebar#index
+                                                       POST           /admin/appearances/widgets/sidebar(.:format)                                    camaleon_cms/admin/appearances/widgets/sidebar#create
+            new_cama_admin_appearances_widgets_sidebar GET            /admin/appearances/widgets/sidebar/new(.:format)                                camaleon_cms/admin/appearances/widgets/sidebar#new
+           edit_cama_admin_appearances_widgets_sidebar GET            /admin/appearances/widgets/sidebar/:id/edit(.:format)                           camaleon_cms/admin/appearances/widgets/sidebar#edit
+                cama_admin_appearances_widgets_sidebar PATCH          /admin/appearances/widgets/sidebar/:id(.:format)                                camaleon_cms/admin/appearances/widgets/sidebar#update
+                                                       PUT            /admin/appearances/widgets/sidebar/:id(.:format)                                camaleon_cms/admin/appearances/widgets/sidebar#update
+                                                       DELETE         /admin/appearances/widgets/sidebar/:id(.:format)                                camaleon_cms/admin/appearances/widgets/sidebar#destroy
+                             toggle_cama_admin_plugins GET            /admin/plugins/toggle(.:format)                                                 camaleon_cms/admin/plugins#toggle
+                             cama_admin_plugin_upgrade GET            /admin/plugins/:plugin_id/upgrade(.:format)                                     camaleon_cms/admin/plugins#upgrade
+                                    cama_admin_plugins GET            /admin/plugins(.:format)                                                        camaleon_cms/admin/plugins#index
+                                     cama_admin_plugin DELETE         /admin/plugins/:id(.:format)                                                    camaleon_cms/admin/plugins#destroy
+                            save_cama_admin_installers POST           /admin/installers/save(.:format)                                                camaleon_cms/admin/installers#save
+                         welcome_cama_admin_installers GET            /admin/installers/welcome(.:format)                                             camaleon_cms/admin/installers#welcome
+                                 cama_admin_installers GET            /admin/installers(.:format)                                                     camaleon_cms/admin/installers#index
+                                 crop_cama_admin_media                /admin/media/crop(.:format)                                                     camaleon_cms/admin/media#crop
+                                 ajax_cama_admin_media GET            /admin/media/ajax(.:format)                                                     camaleon_cms/admin/media#ajax
+                download_private_file_cama_admin_media GET            /admin/media/download_private_file(.:format)                                    camaleon_cms/admin/media#download_private_file
+                               upload_cama_admin_media POST           /admin/media/upload(.:format)                                                   camaleon_cms/admin/media#upload
+                              actions_cama_admin_media POST           /admin/media/actions(.:format)                                                  camaleon_cms/admin/media#actions
+                                      cama_admin_media GET            /admin/media(.:format)                                                          camaleon_cms/admin/media#index
+                         admin_plugins_attack_settings GET            /admin/plugins/attack/settings(.:format)                                        plugins/attack/admin#settings
+                                                       POST           /admin/plugins/attack/settings(.:format)                                        plugins/attack/admin#save_settings
+                    admin_plugins_front_cache_settings GET            /admin/plugins/front_cache/settings(.:format)                                   plugins/front_cache/admin#settings
+                       admin_plugins_front_cache_clean GET            /admin/plugins/front_cache/clean(.:format)                                      plugins/front_cache/admin#clean_cache
+                                                       POST           /admin/plugins/front_cache/settings(.:format)                                   plugins/front_cache/admin#save_settings
+                                                       GET            /admin/*path(.:format)                                                          camaleon_cms/admin/admin#render_error {:error_msg=>"Invalid route"}
+                                             cama_root GET            /(:locale)(.:format)                                                            camaleon_cms/frontend#index {:locale=>/en/}
+                                     cama_post_type_en GET            (/:locale)/group/:post_type_id-:title(.:format)                                 camaleon_cms/frontend#post_type {:locale=>/en/, :post_type_id=>/[0-9]+/}
+                             cama_post_of_post_type_en GET            (/:locale)/group/:post_type_id-:title/:slug(.:format)                           camaleon_cms/frontend#post {:locale=>/en/, :post_type_id=>/[0-9]+/}
+                                      cama_category_en GET            (/:locale)/category/:category_id-:title(.:format)                               camaleon_cms/frontend#category {:locale=>/en/, :category_id=>/[0-9]+/}
+                              cama_post_of_category_en GET            (/:locale)/category/:category_id-:title/:slug(.:format)                         camaleon_cms/frontend#post {:locale=>/en/, :category_id=>/[0-9]+/}
+                    cama_post_of_category_post_type_en GET            (/:locale)/:post_type_title/category/:category_id-:title/:slug(.:format)        camaleon_cms/frontend#post {:locale=>/en/, :post_type_title=>/(?!(en))[\w\.\-]+/, :category_id=>/[0-9]+/}
+                                      cama_post_tag_en GET            (/:locale)/tag/:post_tag_id-:title(.:format)                                    camaleon_cms/frontend#post_tag {:locale=>/en/, :post_tag_id=>/[0-9]+/}
+                                   cama_post_of_tag_en GET            (/:locale)/tag/:post_tag_id-:title/:slug(.:format)                              camaleon_cms/frontend#post {:locale=>/en/, :post_tag_id=>/[0-9]+/}
+                                       cama_profile_en GET            (/:locale)/profile/:user_id-:user_name(.:format)                                camaleon_cms/frontend#profile {:locale=>/en/, :user_id=>/[0-9]+/}
+                                        cama_search_en GET            (/:locale)/search(.:format)                                                     camaleon_cms/frontend#search {:locale=>/en/}
+                                          cama_profile GET            (/:locale)/profile/:user_id-:user_name(.:format)                                camaleon_cms/frontend#profile {:locale=>/en/, :user_id=>/[0-9]+/}
+                                           cama_search GET            (/:locale)/search(.:format)                                                     camaleon_cms/frontend#search {:locale=>/en/}
+                                 cama_post_of_posttype GET            (/:locale)/:post_type_title/:slug(.:format)                                     camaleon_cms/frontend#post {:locale=>/en/, :post_type_title=>/(?!(en))[\w\.\-]+/}
+                                     cama_save_comment POST           (/:locale)/save_comment/:post_id(.:format)                                      camaleon_cms/frontend#save_comment {:locale=>/en/}
+                                        cama_save_form POST           (/:locale)/save_form(.:format)                                                  camaleon_cms/frontend#save_form {:locale=>/en/}
+                                          cama_sitemap GET            (/:locale)/sitemap(.:format)                                                    camaleon_cms/frontend#sitemap {:format=>:xml, :locale=>/en/}
+                                           cama_robots GET            (/:locale)/robots(.:format)                                                     camaleon_cms/frontend#robots {:format=>:txt, :locale=>/en/}
+                                              cama_rss GET            (/:locale)/rss(.:format)                                                        camaleon_cms/frontend#rss {:format=>"rss", :locale=>/en/}
+                                             cama_ajax GET            (/:locale)/ajax(.:format)                                                       camaleon_cms/frontend#ajax {:locale=>/en/}
+                                      cama_post_type_2 GET            (/:locale)/:post_type_slug(.:format)                                            camaleon_cms/frontend#post_type {:post_type_id=>2, :locale=>/en/, :post_type_slug=>/(post)/}
+                                      cama_post_type_7 GET            (/:locale)/:post_type_slug(.:format)                                            camaleon_cms/frontend#post_type {:post_type_id=>7, :locale=>/en/, :post_type_slug=>/(page)/}
+                                     cama_post_type_20 GET            (/:locale)/:post_type_slug(.:format)                                            camaleon_cms/frontend#post_type {:post_type_id=>20, :locale=>/en/, :post_type_slug=>/(organization)/}
+                                     cama_post_type_21 GET            (/:locale)/:post_type_slug(.:format)                                            camaleon_cms/frontend#post_type {:post_type_id=>21, :locale=>/en/, :post_type_slug=>/(code)/}
+                                     cama_post_type_22 GET            (/:locale)/:post_type_slug(.:format)                                            camaleon_cms/frontend#post_type {:post_type_id=>22, :locale=>/en/, :post_type_slug=>/(ecc)/}
+                                   cama_hierarchy_post GET            (/:locale)/:parent_title/*slug(.:format)                                        camaleon_cms/frontend#post {:format=>/html|rss|json/, :slug=>/[a-zA-Z0-9_=\s\-\/]+/, :locale=>/en/, :parent_title=>/(?!(en))[\w\-]+/}
+                                             cama_post GET            (/:locale)/:slug(.:format)                                                      camaleon_cms/frontend#post {:format=>/html|rss|json/, :locale=>/en/, :slug=>/[a-zA-Z0-9_=\s\-]+/}

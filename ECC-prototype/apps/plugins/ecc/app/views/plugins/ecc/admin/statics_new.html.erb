@@ -1,0 +1,11 @@
+<div class="content-frame">
+    <%= form_tag(:controller => 'statics', action: "create", html: {class: "new_ob"}) do %>
+      <%= label_tag "Page Title:" %><em class="text-danger">*</em>
+      <%= text_field_tag :title %>
+      <%= label_tag "Content" %><em class="text-danger">*</em>
+      <%= text_field_tag :content %>
+      <%= label_tag "Page Type:" %> <em class="text-danger">*</em>
+      <%= text_field_tag :ptype%>
+    <%= submit_tag "Create" %>
+  <% end %>
+</div>
